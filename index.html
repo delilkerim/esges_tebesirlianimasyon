@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>ESGES 2027 | Tasarım Önizlemesi</title>
+  <title>ESGES 2027 | Tasarım Önizlemesi – Sürüm 2</title>
   <link rel="icon" href="images/esges-logo.png">
   <link rel="stylesheet" href="assets/app-12ZrAUv-.css">
   <script type="module" src="assets/app-DJ3R9gSy.js"></script>
@@ -2112,5 +2112,27 @@
 </button>
 
 
+<!-- surum-gecisi -->
+<style>
+  .sg-cubuk{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:6px;
+    padding:6px;border-radius:999px;background:rgba(15,23,42,.92);box-shadow:0 10px 30px rgba(0,0,0,.35);
+    font:600 13px/1.2 Montserrat,system-ui,sans-serif;color:#cbd5e1;max-width:calc(100vw - 32px)}
+  .sg-etiket{padding:0 8px 0 10px;white-space:nowrap}
+  .sg-dugme{display:flex;align-items:center;gap:7px;padding:8px 14px 8px 8px;border-radius:999px;color:#e2e8f0;text-decoration:none;white-space:nowrap}
+  .sg-dugme:hover{background:rgba(255,255,255,.1)}
+  .sg-dugme:focus-visible{outline:2px solid #6ee7b7;outline-offset:2px}
+  .sg-secili{background:#059669;color:#fff} .sg-secili:hover{background:#059669}
+  .sg-no{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);font-size:12px}
+  .sg-kisa{display:none}
+  .sg-bosluk{height:72px;background:#020617}
+  @media (max-width:640px){.sg-etiket,.sg-uzun{display:none}.sg-kisa{display:inline}.sg-cubuk{bottom:10px}}
+</style>
+<div class="sg-bosluk" aria-hidden="true"></div>
+<nav class="sg-cubuk" aria-label="Tasarım sürümleri">
+  <span class="sg-etiket">Tasarım:</span>
+  <a href="onceki.html" class="sg-dugme"><span class="sg-no">1</span><span class="sg-uzun">Klasik içerik, tahta arka planda</span><span class="sg-kisa">Klasik</span></a>
+  <a href="index.html" class="sg-dugme sg-secili" aria-current="page"><span class="sg-no">2</span><span class="sg-uzun">Tebeşirle yazılmış içerik</span><span class="sg-kisa">Tebeşir</span></a>
+</nav>
+<!-- /surum-gecisi -->
 </body>
 </html>

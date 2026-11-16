@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ESGES 2027 | Tasarım Önizlemesi – Sürüm 1</title>
+  <link rel="icon" href="images/esges-logo.png">
+  <link rel="stylesheet" href="assets/app-8O1k_SH7.css">
+  <script type="module" src="assets/app-DquBh3Ga.js"></script>
+</head>
+<body class="font-sans bg-brand-lightBg text-slate-800 antialiased selection:bg-brand-emerald selection:text-white">
+
+
+  <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-900 flex flex-col items-center justify-center transition-opacity duration-700">
+  <div class="relative flex flex-col items-center justify-center">
+    <div class="animate-pulse flex flex-col items-center">
+      <svg class="w-32 h-32 md:w-40 md:h-40 drop-shadow-2xl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" stroke="url(#esgesGrad)" stroke-width="4" fill="#0f172a" />
+        <path d="M100 35C100 35 145 65 145 110C145 145 115 165 100 165C85 165 55 145 55 110C55 65 100 35 100 35Z" fill="url(#leafGrad)" opacity="0.2"/>
+        <path d="M100 45C100 45 135 75 135 110C135 135 115 155 100 155C85 155 65 135 65 110C65 75 100 45 100 45Z" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+        <path d="M100 55V145" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 3"/>
+        <path d="M100 95C115 85 125 90 125 90" stroke="#059669" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M100 115C85 105 75 110 75 110" stroke="#059669" stroke-width="2.5" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="esgesGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#10b981"/>
+            <stop offset="0.5" stop-color="#0284c7"/>
+            <stop offset="1" stop-color="#f97316"/>
+          </linearGradient>
+          <linearGradient id="leafGrad" x1="100" y1="35" x2="100" y2="165" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#10b981"/>
+            <stop offset="1" stop-color="#0284c7"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="mt-4 text-center">
+        <span class="text-3xl font-extrabold tracking-wider text-emerald-400 block font-['Montserrat']">ESGES</span>
+        <span class="text-xs font-semibold tracking-widest text-slate-300 uppercase block mt-1">Eskişehir Geleceğin Sesi Sempozyumu</span>
+        <span class="inline-block mt-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">2027</span>
+      </div>
+    </div>
+  </div>
+</div>
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-100">
+  
+  <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 xl:gap-6">
+    <a href="#" class="flex items-center group py-1 shrink-0">
+      <img src="images/esges-logo.png" alt="ESGES 2027" class="h-9 sm:h-12 xl:h-14 w-auto max-w-[130px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-105">
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-6 2xl:gap-8 font-title font-semibold text-sm text-slate-700 whitespace-nowrap">
+      <a href="#anasayfa" class="hover:text-brand-emerald transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-emerald after:rounded-full">Anasayfa</a>
+      <a href="#duyurular" class="hover:text-brand-emerald transition-colors py-1">Duyurular</a>
+      <a href="#takvim" class="hover:text-brand-emerald transition-colors py-1">Önemli Tarihler</a>
+      
+      <div class="relative" data-kurul-menu>
+        <button type="button" id="kurulMenuDugme" data-kurul-menu-dugme aria-expanded="false" aria-controls="kurulMenu" class="hover:text-brand-emerald transition-colors py-1 inline-flex items-center gap-1.5 font-semibold">
+          <span>Kurullar</span><i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200" aria-hidden="true"></i>
+        </button>
+        <div id="kurulMenu" data-kurul-menu-liste class="hidden absolute left-1/2 -translate-x-1/2 top-full mt-3 w-80 rounded-2xl bg-white border border-slate-100 shadow-xl p-2 z-50 whitespace-normal">
+                      <button type="button" data-kurul="0" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-sitemap text-xs"></i></span>
+              <span class="flex-1 leading-snug">Sempozyum Düzenleme Kurulu</span>
+              <span class="text-[11px] font-normal text-slate-400">6</span>
+            </button>
+                      <button type="button" data-kurul="1" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-flask text-xs"></i></span>
+              <span class="flex-1 leading-snug">Sempozyum Bilim Kurulu</span>
+              <span class="text-[11px] font-normal text-slate-400">39</span>
+            </button>
+                      <button type="button" data-kurul="2" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-chalkboard-user text-xs"></i></span>
+              <span class="flex-1 leading-snug">Sempozyum Eğitim Kurulu</span>
+              <span class="text-[11px] font-normal text-slate-400">8</span>
+            </button>
+                      <button type="button" data-kurul="3" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-laptop-code text-xs"></i></span>
+              <span class="flex-1 leading-snug">Sempozyum WEB Sitesi &amp; Grafik Tasarım Ekibi</span>
+              <span class="text-[11px] font-normal text-slate-400">4</span>
+            </button>
+                      <button type="button" data-kurul="4" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-pen-ruler text-xs"></i></span>
+              <span class="flex-1 leading-snug">Grafik Tasarım &amp; Dizgi</span>
+              <span class="text-[11px] font-normal text-slate-400">1</span>
+            </button>
+                      <button type="button" data-kurul="5" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-clipboard-check text-xs"></i></span>
+              <span class="flex-1 leading-snug">Sempozyum Başvuru Değerlendirme Kurulu</span>
+              <span class="text-[11px] font-normal text-slate-400">27</span>
+            </button>
+                      <button type="button" data-kurul="6" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left text-sm text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+              <span class="w-8 h-8 shrink-0 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-people-group text-xs"></i></span>
+              <span class="flex-1 leading-snug">Sempozyum Organizasyon Ekibi</span>
+              <span class="text-[11px] font-normal text-slate-400">10</span>
+            </button>
+                  </div>
+      </div>
+      <a href="#alt-temalar" class="hover:text-brand-emerald transition-colors py-1">Sempozyum & Temalar</a>
+      <a href="#sss" class="hover:text-brand-emerald transition-colors py-1">SSS</a>
+      <a href="#iletisim" class="hover:text-brand-emerald transition-colors py-1">İletişim</a>
+    </nav>
+
+    <div class="flex items-center gap-2 2xl:gap-3 shrink-0">
+      
+      <button data-modal-open="onizleme-takipModal" title="Takip kodunuzla başvurunuzu görüntüleyin" aria-label="Başvurumu görüntüle" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-title font-bold tracking-wide whitespace-nowrap text-brand-emerald bg-white border-2 border-brand-emerald hover:bg-brand-emerald hover:text-white shadow-xs transition-all transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="2xl:hidden">BAŞVURUM</span>
+        <span class="hidden 2xl:inline">BAŞVURUMU GÖRÜNTÜLE</span>
+      </button>
+      <button data-modal-open="onizleme-abstractModal" class="hidden md:inline-flex whitespace-nowrap items-center gap-2 px-5 py-2.5 rounded-full text-xs font-title font-bold tracking-wide text-white bg-gradient-to-r from-brand-accent to-amber-600 hover:from-brand-accentHover hover:to-orange-700 shadow-lg shadow-orange-500/25 transition-all transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+        <span class="2xl:hidden">BİLDİRİ GÖNDER</span>
+        <span class="hidden 2xl:inline">BİLDİRİ/POSTER GÖNDER</span>
+      </button>
+
+    <button id="mobileMenuBtn" aria-label="Menüyü Aç" class="xl:hidden p-2 rounded-lg text-slate-700 hover:text-brand-emerald hover:bg-slate-100 transition-colors focus:outline-hidden">
+      <i class="fa-solid fa-bars text-2xl"></i>
+    </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileDrawer" class="fixed inset-0 bg-slate-900/60 z-50 backdrop-blur-xs hidden xl:hidden">
+  <div class="w-4/5 max-w-sm bg-white h-full ml-auto p-6 flex flex-col justify-between shadow-2xl overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between border-b pb-4 border-slate-100">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-brand-emerald text-white flex items-center justify-center font-bold">E</div>
+          <span class="font-title font-extrabold text-lg text-slate-800">ESGES Menü</span>
+        </div>
+        <button id="closeDrawerBtn" aria-label="Menüyü Kapat" class="p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 transition-colors">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col space-y-3 font-title font-semibold text-slate-700">
+        <a href="#anasayfa" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors"><span>Anasayfa</span><i class="fa-solid fa-angle-right text-xs opacity-50"></i></a>
+        <a href="#duyurular" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors"><span>Duyurular</span><i class="fa-solid fa-angle-right text-xs opacity-50"></i></a>
+        <a href="#takvim" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors"><span>Faaliyet Takvimi</span><i class="fa-solid fa-angle-right text-xs opacity-50"></i></a>
+        
+        <div data-kurul-menu>
+          <button type="button" data-kurul-menu-dugme aria-expanded="false" aria-controls="kurulMenuMobil" class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">
+            <span>Kurullar</span><i class="fa-solid fa-chevron-down text-xs opacity-50 transition-transform duration-200" aria-hidden="true"></i>
+          </button>
+          <div id="kurulMenuMobil" data-kurul-menu-liste class="hidden mt-2 ml-3 pl-3 border-l-2 border-emerald-100 flex flex-col gap-1">
+                          <button type="button" data-kurul="0" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Sempozyum Düzenleme Kurulu</button>
+                          <button type="button" data-kurul="1" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Sempozyum Bilim Kurulu</button>
+                          <button type="button" data-kurul="2" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Sempozyum Eğitim Kurulu</button>
+                          <button type="button" data-kurul="3" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Sempozyum WEB Sitesi &amp; Grafik Tasarım Ekibi</button>
+                          <button type="button" data-kurul="4" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Grafik Tasarım &amp; Dizgi</button>
+                          <button type="button" data-kurul="5" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Sempozyum Başvuru Değerlendirme Kurulu</button>
+                          <button type="button" data-kurul="6" class="mobile-nav-link text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-emerald-50 hover:text-brand-emerald transition-colors">Sempozyum Organizasyon Ekibi</button>
+                      </div>
+        </div>
+        <a href="#alt-temalar" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors"><span>Alt Temalar</span><i class="fa-solid fa-angle-right text-xs opacity-50"></i></a>
+        <a href="#sss" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors"><span>Sıkça Sorulan Sorular</span><i class="fa-solid fa-angle-right text-xs opacity-50"></i></a>
+        <a href="#iletisim" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-brand-emerald transition-colors"><span>İletişim</span><i class="fa-solid fa-angle-right text-xs opacity-50"></i></a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+      <button data-modal-open="textModal" class="w-full py-2.5 px-4 rounded-xl font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 active:scale-95 transition-all text-center text-xs">Çağrı Metni İncele</button>
+      <button data-modal-open="onizleme-takipModal" class="w-full py-2.5 px-4 rounded-xl font-semibold text-brand-emerald bg-white border-2 border-brand-emerald hover:bg-emerald-50 active:scale-95 transition-all text-center text-xs"><i class="fa-solid fa-magnifying-glass mr-1.5" aria-hidden="true"></i>Başvurumu Görüntüle</button>
+      <button data-modal-open="onizleme-abstractModal" class="w-full py-3 px-4 rounded-xl bg-brand-accent text-white font-title font-bold text-center text-sm shadow-md hover:bg-brand-accentHover">Bildiri Gönder</button>
+    </div>
+  </div>
+</div>
+
+  <main>
+      <section id="anasayfa" class="relative min-h-[92vh] flex items-center justify-center pt-28 sm:pt-32 md:pt-36 pb-16 overflow-hidden">
+  
+  <div id="tebesirTahtasi" class="absolute inset-0 z-0 overflow-hidden bg-[#2b5442]" role="img" aria-label="Tebeşir tahtası çizimi">
+    <canvas data-katman="tahta" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+    <canvas data-katman="murekkep" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+    <canvas data-katman="canli" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+    <canvas data-katman="arac" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+  </div>
+  <div class="hero-tahta-ortu absolute inset-0 z-0 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="hero-icerik relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center text-white mt-4">
+    
+    <div class="ziyaretci-sayaci inline-flex items-center gap-3 sm:gap-4 mb-6 pl-2 pr-5 py-2 rounded-full shadow-xl" role="group" aria-label="Ziyaretçi sayacı">
+      <span class="relative w-10 h-10 shrink-0 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 text-white flex items-center justify-center text-base shadow-lg shadow-emerald-900/40">
+        <i class="fa-solid fa-users" aria-hidden="true"></i>
+        <span class="absolute -top-0.5 -right-0.5 flex w-3 h-3" aria-hidden="true">
+          <span class="absolute inline-flex w-full h-full rounded-full bg-amber-400 opacity-75 animate-ping"></span>
+          <span class="relative inline-flex w-3 h-3 rounded-full bg-amber-400 border border-white/70"></span>
+        </span>
+      </span>
+      <span class="text-left leading-tight">
+        <span class="block text-[10px] font-title font-semibold uppercase tracking-widest text-emerald-200">Toplam Ziyaretçi</span>
+        <span data-sayac="7" class="block font-title font-black text-lg sm:text-xl tabular-nums tracking-tight">7</span>
+      </span>
+      <span class="w-px h-8 bg-white/25" aria-hidden="true"></span>
+      <span class="text-left leading-tight">
+        <span class="block text-[10px] font-title font-semibold uppercase tracking-widest text-emerald-200">Bugün</span>
+        <span data-sayac="4" class="block font-title font-black text-lg sm:text-xl tabular-nums tracking-tight text-amber-300">4</span>
+      </span>
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-title font-extrabold tracking-tight leading-snug mb-4">
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-300">
+        ESKİŞEHİR GELECEĞİN SESİ SEMPOZYUMU (ESGES)
+      </span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base text-slate-200/90 font-normal leading-relaxed mb-6">
+      ESGES Öğrenci Sempozyumu ile öğrencilerimizin bilimsel projelerini sergilemelerine olanak sağlanacak, fen ve sosyal bilimler alanlarında çalışan bilim insanları ile öğrenciler bir araya getirilerek ilgili disiplinlerde bilgi ve etkileşim güçlendirilecek, genç bilim insanlarının yetişmesine katkıda bulunulacak, bilimsel araştırma tekniklerinde öğrencilerimize farkındalık kazandırılacaktır.
+    </p>
+
+    <div class="max-w-3xl mx-auto glass-card-dark rounded-2xl p-4 sm:p-5 shadow-2xl mb-8 border border-emerald-500/30">
+      <p class="text-[11px] sm:text-xs font-title font-semibold uppercase tracking-wider text-emerald-300 mb-3 text-center">
+        Sempozyum Başlangıcına Kalan Süre
+      </p>
+
+      <div class="grid grid-cols-5 gap-1.5 sm:gap-3 text-center">
+        <div class="bg-black/35 rounded-xl p-2 sm:p-3 border border-white/10 flex flex-col justify-center">
+          <span id="countdownMonths" class="block font-title font-black text-xl sm:text-3xl text-emerald-300">00</span>
+          <span class="text-[9px] sm:text-[11px] font-medium text-emerald-100 uppercase mt-0.5">Ay</span>
+        </div>
+        <div class="bg-black/35 rounded-xl p-2 sm:p-3 border border-white/10 flex flex-col justify-center">
+          <span id="countdownDays" class="block font-title font-black text-xl sm:text-3xl text-white">00</span>
+          <span class="text-[9px] sm:text-[11px] font-medium text-emerald-100 uppercase mt-0.5">Gün</span>
+        </div>
+        <div class="bg-black/35 rounded-xl p-2 sm:p-3 border border-white/10 flex flex-col justify-center">
+          <span id="countdownHours" class="block font-title font-black text-xl sm:text-3xl text-white">00</span>
+          <span class="text-[9px] sm:text-[11px] font-medium text-emerald-100 uppercase mt-0.5">Saat</span>
+        </div>
+        <div class="bg-black/35 rounded-xl p-2 sm:p-3 border border-white/10 flex flex-col justify-center">
+          <span id="countdownMinutes" class="block font-title font-black text-xl sm:text-3xl text-white">00</span>
+          <span class="text-[9px] sm:text-[11px] font-medium text-emerald-100 uppercase mt-0.5">Dakika</span>
+        </div>
+        <div class="bg-black/35 rounded-xl p-2 sm:p-3 border border-white/10 flex flex-col justify-center">
+          <span id="countdownSeconds" class="block font-title font-black text-xl sm:text-3xl text-amber-400">00</span>
+          <span class="text-[9px] sm:text-[11px] font-medium text-emerald-100 uppercase mt-0.5">Saniye</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button data-modal-open="textModal" class="w-full sm:w-auto px-8 py-4 rounded-xl font-title font-bold text-sm tracking-wide text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-600 backdrop-blur-md transition-all shadow-lg flex items-center justify-center gap-2 transform hover:-translate-y-1">
+        <i class="fa-solid fa-book-open-reader text-emerald-400"></i>
+        <span>SEMPOZYUM ÇAĞRI METNİ</span>
+      </button>
+      <button data-modal-open="onizleme-abstractModal" class="w-full sm:w-auto px-8 py-4 rounded-xl font-title font-bold text-sm tracking-wide text-white bg-gradient-to-r from-brand-accent to-orange-600 hover:from-orange-500 hover:to-orange-700 shadow-xl shadow-orange-600/30 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1">
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>BİLDİRİ / POSTER GÖNDER</span>
+      </button>
+    </div>
+
+    
+    <div class="flex justify-center items-center gap-3 mt-10">
+      <div id="tebesirNoktalar" class="flex items-center gap-2"></div>
+      <button type="button" id="tebesirDurdur" aria-label="Tahta animasyonunu duraklat" aria-pressed="false" class="w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 border border-white/25 text-white/90 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-pause text-xs" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+  <section id="duyurular" class="py-12 sm:py-16 bg-slate-50 relative border-b border-slate-200 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal-heading flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8 sm:mb-10 pb-4 border-b border-slate-200/80">
+      <div>
+        <span class="text-[11px] font-title font-bold uppercase tracking-widest text-brand-emerald block">GÜNCEL GELİŞMELER</span>
+        <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-900 mt-1">Sempozyum Duyuruları</h2>
+        <div class="w-12 h-1 bg-brand-emerald rounded-full mt-2"></div>
+      </div>
+      <div class="flex items-center gap-2 self-start sm:self-auto">
+        <a href="#" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs font-title font-bold text-slate-700 hover:text-white hover:bg-brand-emerald hover:border-brand-emerald shadow-xs transition-all duration-300 group shrink-0">
+          <span>Tüm Duyurular</span>
+          <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <button id="prevNoticeBtn" type="button" aria-label="Önceki duyurular" class="w-10 h-10 rounded-xl bg-white border border-slate-300 text-slate-700 hover:text-white hover:bg-brand-emerald hover:border-brand-emerald shadow-xs flex items-center justify-center transition-all active:scale-95 disabled:opacity-30 disabled:pointer-events-none">
+          <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
+        </button>
+        <button id="nextNoticeBtn" type="button" aria-label="Sonraki duyurular" class="w-10 h-10 rounded-xl bg-white border border-slate-300 text-slate-700 hover:text-white hover:bg-brand-emerald hover:border-brand-emerald shadow-xs flex items-center justify-center transition-all active:scale-95 disabled:opacity-30 disabled:pointer-events-none">
+          <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+          
+      <div id="noticesSlider" class="reveal flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-6 pt-2">
+                  <article class="w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-lg border border-slate-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-24 sm:h-28 w-full overflow-hidden bg-slate-100">
+                                  <img src="images/duyurular/esges-duyuru-1-bildiri-ozeti.jpg" alt="Bildiri Özeti Gönderimi" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                              </div>
+              <div class="p-3.5">
+                <time datetime="2026-10-24" class="text-[10px] text-slate-400 block mb-1"><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i>24 Ekim 2026</time>
+                <h3 class="font-title font-bold text-[13px] text-slate-900 group-hover:text-brand-emerald transition-colors line-clamp-3 leading-snug">Bildiri Özeti Gönderim Süreci Başlamıştır</h3>
+                <p class="text-[11px] text-slate-500 mt-1.5 line-clamp-3 leading-relaxed">İklim değişikliği ve gelecek temalı akademik çalışmalar için bildiri kabul portalı aktif hale getirilmiştir.</p>
+              </div>
+            </div>
+            <div class="px-3.5 pb-3 pt-2 border-t border-slate-100/80 flex items-center justify-between gap-2">
+              
+              <template id="duyuru-icerik-0">5 Ekim 2026 itibarıyla açılan başvuru panelinde özet metinler sisteme yüklenebilir. Son başvuru tarihi 02 Ocak 2027 mesai bitimidir.</template>
+              <button type="button" data-notice-title="Bildiri Özeti Gönderim Süreci Başlamıştır" data-notice-template="duyuru-icerik-0" class="text-xs font-title font-bold text-brand-emerald group-hover:text-brand-darkGreen inline-flex items-center gap-1">
+                <span>İncele</span>
+                <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+              </button>
+              
+              <span class="text-[10px] text-slate-400 font-medium">#01</span>
+            </div>
+          </article>
+                  <article class="w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-lg border border-slate-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-24 sm:h-28 w-full overflow-hidden bg-slate-100">
+                                  <img src="images/duyurular/esges-duyuru-2-oturum-rehberi.jpg" alt="Karbon Nötr Oturum Rehberi" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                              </div>
+              <div class="p-3.5">
+                <time datetime="2026-10-18" class="text-[10px] text-slate-400 block mb-1"><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i>18 Ekim 2026</time>
+                <h3 class="font-title font-bold text-[13px] text-slate-900 group-hover:text-brand-emerald transition-colors line-clamp-3 leading-snug">İklim Değişikliği &amp; Oturum Rehberi</h3>
+                <p class="text-[11px] text-slate-500 mt-1.5 line-clamp-3 leading-relaxed">Yüz yüze ve hibrit katılım sağlayacak araştırmacılar için oturum kuralları ve teknik yönergeler duyuruldu.</p>
+              </div>
+            </div>
+            <div class="px-3.5 pb-3 pt-2 border-t border-slate-100/80 flex items-center justify-between gap-2">
+              
+              <template id="duyuru-icerik-1">Sempozyum merkezine ulaşımda toplu taşımayı tercih eden katılımcılarımız adına kampüste hatıra fidanı dikilecektir.</template>
+              <button type="button" data-notice-title="İklim Değişikliği &amp; Oturum Rehberi" data-notice-template="duyuru-icerik-1" class="text-xs font-title font-bold text-brand-emerald group-hover:text-brand-darkGreen inline-flex items-center gap-1">
+                <span>İncele</span>
+                <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+              </button>
+              
+              <span class="text-[10px] text-slate-400 font-medium">#02</span>
+            </div>
+          </article>
+                  <article class="w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-lg border border-slate-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-24 sm:h-28 w-full overflow-hidden bg-slate-100">
+                                  <img src="images/duyurular/esges-duyuru-3-bildiriler-kitabi.jpg" alt="Bildiriler Kitabı ve İndeks" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                              </div>
+              <div class="p-3.5">
+                <time datetime="2026-10-10" class="text-[10px] text-slate-400 block mb-1"><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i>10 Ekim 2026</time>
+                <h3 class="font-title font-bold text-[13px] text-slate-900 group-hover:text-brand-emerald transition-colors line-clamp-3 leading-snug">Bildiriler Kitabı ve İndeks Anlaşmaları</h3>
+                <p class="text-[11px] text-slate-500 mt-1.5 line-clamp-3 leading-relaxed">Hakem kurulunca kabul edilen tam metin bildiriler uluslararası ISBN tescilli e-kitapta yer alacaktır.</p>
+              </div>
+            </div>
+            <div class="px-3.5 pb-3 pt-2 border-t border-slate-100/80 flex items-center justify-between gap-2">
+              
+              <template id="duyuru-icerik-2">Tam metinler 15 Mart 2027 tarihine kadar sisteme yüklenecek ve açık erişimli olarak dijital kütüphanemizde yayınlanacaktır.</template>
+              <button type="button" data-notice-title="Bildiriler Kitabı ve İndeks Anlaşmaları" data-notice-template="duyuru-icerik-2" class="text-xs font-title font-bold text-brand-emerald group-hover:text-brand-darkGreen inline-flex items-center gap-1">
+                <span>İncele</span>
+                <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+              </button>
+              
+              <span class="text-[10px] text-slate-400 font-medium">#03</span>
+            </div>
+          </article>
+                  <article class="w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-lg border border-slate-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-24 sm:h-28 w-full overflow-hidden bg-slate-100">
+                                  <img src="images/duyurular/esges-duyuru-4-genc-arastirmaci.jpg" alt="Genç Araştırmacı Çalıştayları" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                              </div>
+              <div class="p-3.5">
+                <time datetime="2026-10-01" class="text-[10px] text-slate-400 block mb-1"><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i>01 Ekim 2026</time>
+                <h3 class="font-title font-bold text-[13px] text-slate-900 group-hover:text-brand-emerald transition-colors line-clamp-3 leading-snug">Genç Araştırmacı ve Öğrenci Çalıştayları</h3>
+                <p class="text-[11px] text-slate-500 mt-1.5 line-clamp-3 leading-relaxed">Sempozyum paralelinde lise ve BİLSEM öğrencilerine yönelik iklim atölyeleri takvimi açıklandı.</p>
+              </div>
+            </div>
+            <div class="px-3.5 pb-3 pt-2 border-t border-slate-100/80 flex items-center justify-between gap-2">
+              
+              <template id="duyuru-icerik-3">Atölye kayıtları kontenjanla sınırlı olup, danışman öğretmenler eşliğinde grup başvuruları kabul edilmektedir.</template>
+              <button type="button" data-notice-title="Genç Araştırmacı ve Öğrenci Çalıştayları" data-notice-template="duyuru-icerik-3" class="text-xs font-title font-bold text-brand-emerald group-hover:text-brand-darkGreen inline-flex items-center gap-1">
+                <span>İncele</span>
+                <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+              </button>
+              
+              <span class="text-[10px] text-slate-400 font-medium">#04</span>
+            </div>
+          </article>
+              </div>
+
+      <div class="w-full max-w-xs mx-auto mt-2 bg-slate-200 h-1.5 rounded-full overflow-hidden">
+        <div id="noticeProgressBar" class="bg-brand-emerald h-full w-1/4 transition-all duration-300 rounded-full"></div>
+      </div>
+      </div>
+</section>
+  <section id="takvim" class="py-16 sm:py-20 bg-white relative overflow-hidden border-b border-slate-200/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="reveal-heading flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10 sm:mb-14 pb-4 border-b border-slate-200/80">
+      <div>
+        <span class="text-[11px] font-title font-bold uppercase tracking-widest text-brand-emerald block">Önemli Tarihler</span>
+        <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-900 mt-1">Faaliyet Takvimi</h2>
+        <div class="w-12 h-1 bg-brand-emerald rounded-full mt-2"></div>
+      </div>
+      <div id="timelineStatus" class="hidden items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-title font-bold text-emerald-800 self-start sm:self-auto">
+        <span class="relative flex w-2.5 h-2.5">
+          <span class="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
+          <span class="relative inline-flex w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        </span>
+        <span id="timelineStatusText"></span>
+      </div>
+    </div>
+
+    <div class="relative">
+      <!-- Masaüstü: yatay çizgi -->
+      <div class="hidden lg:block absolute top-7 left-[calc(100%/12)] right-[calc(100%/12)] h-1 rounded-full bg-slate-200">
+        <div id="timelineFillH" class="w-0 h-full rounded-full bg-gradient-to-r from-brand-emerald to-teal-500 transition-[width] duration-1000 ease-out"></div>
+      </div>
+      <!-- Telefon/tablet: dikey çizgi -->
+      <div class="lg:hidden absolute left-7 top-7 bottom-7 w-1 -translate-x-1/2 rounded-full bg-slate-200">
+        <div id="timelineFillV" class="w-full h-0 rounded-full bg-gradient-to-b from-brand-emerald to-teal-500 transition-[height] duration-1000 ease-out"></div>
+      </div>
+
+      <ol id="timelineSteps" class="relative grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-4">
+
+        <li class="timeline-step timeline-item relative flex lg:flex-col items-start lg:items-center gap-4 lg:text-center" data-start="2026-10-05" data-end="2027-01-01">
+          <div class="step-dot relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center text-lg border-4 border-white shadow-md transition-all duration-300">
+            <i class="step-icon fa-regular fa-envelope-open"></i>
+          </div>
+          <div class="min-w-0 pt-1 lg:pt-0">
+            <span class="step-badge hidden mb-1.5 text-[10px] font-title font-extrabold tracking-wide px-2 py-0.5 rounded-md"></span>
+            <span class="block text-xs font-bold text-brand-emerald">5 Ekim 2026 – 1 Ocak 2027</span>
+            <h3 class="step-title font-title font-bold text-sm text-slate-900 mt-1 leading-snug">Başvuruların Alınması</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sempozyum için başvuruların alınması</p>
+          </div>
+        </li>
+
+        <li class="timeline-step timeline-item relative flex lg:flex-col items-start lg:items-center gap-4 lg:text-center" data-start="2027-02-05">
+          <div class="step-dot relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center text-lg border-4 border-white shadow-md transition-all duration-300">
+            <i class="step-icon fa-solid fa-clipboard-check"></i>
+          </div>
+          <div class="min-w-0 pt-1 lg:pt-0">
+            <span class="step-badge hidden mb-1.5 text-[10px] font-title font-extrabold tracking-wide px-2 py-0.5 rounded-md"></span>
+            <span class="block text-xs font-bold text-brand-emerald">5 Şubat 2027</span>
+            <h3 class="step-title font-title font-bold text-sm text-slate-900 mt-1 leading-snug">Değerlendirme ve Sonuçlar</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Başvuruların değerlendirilmesi ve sonuçların duyurulması</p>
+          </div>
+        </li>
+
+        <li class="timeline-step timeline-item relative flex lg:flex-col items-start lg:items-center gap-4 lg:text-center" data-start="2027-02-12">
+          <div class="step-dot relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center text-lg border-4 border-white shadow-md transition-all duration-300">
+            <i class="step-icon fa-regular fa-calendar-check"></i>
+          </div>
+          <div class="min-w-0 pt-1 lg:pt-0">
+            <span class="step-badge hidden mb-1.5 text-[10px] font-title font-extrabold tracking-wide px-2 py-0.5 rounded-md"></span>
+            <span class="block text-xs font-bold text-brand-emerald">12 Şubat 2027</span>
+            <h3 class="step-title font-title font-bold text-sm text-slate-900 mt-1 leading-snug">Teyit ve Yedekler</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sunum yapacak kişilerin teyit edilmesi ve yedeklerin belirlenmesi</p>
+          </div>
+        </li>
+
+        <li class="timeline-step timeline-item relative flex lg:flex-col items-start lg:items-center gap-4 lg:text-center" data-start="2027-03-15">
+          <div class="step-dot relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center text-lg border-4 border-white shadow-md transition-all duration-300">
+            <i class="step-icon fa-solid fa-book-open"></i>
+          </div>
+          <div class="min-w-0 pt-1 lg:pt-0">
+            <span class="step-badge hidden mb-1.5 text-[10px] font-title font-extrabold tracking-wide px-2 py-0.5 rounded-md"></span>
+            <span class="block text-xs font-bold text-brand-emerald">15 Mart 2027</span>
+            <h3 class="step-title font-title font-bold text-sm text-slate-900 mt-1 leading-snug">Bildiri Tam Metinleri</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Bildiri tam metinlerinin gönderilmesi</p>
+          </div>
+        </li>
+
+        <li class="timeline-step timeline-item relative flex lg:flex-col items-start lg:items-center gap-4 lg:text-center" data-start="2027-04-30">
+          <div class="step-dot relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center text-lg border-4 border-white shadow-md transition-all duration-300">
+            <i class="step-icon fa-solid fa-layer-group"></i>
+          </div>
+          <div class="min-w-0 pt-1 lg:pt-0">
+            <span class="step-badge hidden mb-1.5 text-[10px] font-title font-extrabold tracking-wide px-2 py-0.5 rounded-md"></span>
+            <span class="block text-xs font-bold text-brand-emerald">30 Nisan 2027</span>
+            <h3 class="step-title font-title font-bold text-sm text-slate-900 mt-1 leading-snug">Tam Metin Bildiri Kitabı</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Bildirilerin kitap hâline getirilmesi ve yayımlanması</p>
+          </div>
+        </li>
+
+        <li class="timeline-step timeline-item relative flex lg:flex-col items-start lg:items-center gap-4 lg:text-center" data-start="2027-05-25" data-end="2027-05-26" data-final="true">
+          <div class="step-dot relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center text-lg border-4 border-white shadow-md transition-all duration-300">
+            <i class="step-icon fa-solid fa-users-rectangle"></i>
+          </div>
+          <div class="min-w-0 lg:w-full rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 px-4 py-3 shadow-xs">
+            <span class="step-badge hidden mb-1.5 text-[10px] font-title font-extrabold tracking-wide px-2 py-0.5 rounded-md"></span>
+            <h3 class="step-title font-title font-bold text-sm text-slate-900 leading-snug">Sempozyumun Gerçekleşmesi</h3>
+            <div class="text-2xl font-title font-black text-brand-accent leading-none mt-1.5">25–26</div>
+            <span class="block text-xs font-title font-bold text-slate-700 mt-0.5">Mayıs 2027</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Bilgi, inovasyon ve fikirlerin buluşma noktası</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+</section>
+  <section id="alt-temalar" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="reveal-heading flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-900 tracking-tight">
+          İklim Değişikliği Alt Temaları
+        </h2>
+        <div class="w-14 h-1 bg-brand-emerald rounded-full mt-2"></div>
+      </div>
+
+      <div class="flex items-center gap-2 self-end sm:self-auto">
+        <button id="prevThemeBtn" aria-label="Önceki Temalar" class="w-10 h-10 rounded-xl bg-white border border-slate-300 text-slate-700 hover:text-white hover:bg-brand-emerald hover:border-brand-emerald shadow-xs flex items-center justify-center transition-all active:scale-95 disabled:opacity-30 disabled:pointer-events-none">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <button id="nextThemeBtn" aria-label="Sonraki Temalar" class="w-10 h-10 rounded-xl bg-white border border-slate-300 text-slate-700 hover:text-white hover:bg-brand-emerald hover:border-brand-emerald shadow-xs flex items-center justify-center transition-all active:scale-95 disabled:opacity-30 disabled:pointer-events-none">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="themesSlider" class="reveal flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-6 pt-2">
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-base mb-3 group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-cloud-bolt"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Aşırı Hava Olayları, İklim Riskleri ve Erken Uyarı Sistemleri</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Fırtına, kuraklık ve sel felaketlerine karşı erken uyarı ve risk modellemeleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-sky-700 mt-3 block uppercase tracking-wider">#AltTema-01</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-square-root-variable"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliğinin Bilimsel Temelleri ve İklim Modelleri</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Atmosfer fiziği, iklim veri analitiği ve geleceğe yönelik simülasyon algoritmaları.</p>
+        </div>
+        <span class="text-[10px] font-bold text-indigo-700 mt-3 block uppercase tracking-wider">#AltTema-02</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-binoculars"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Senaryoları ve Gelecek Perspektifleri</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Küresel ısınma projeksiyonları, 1.5°C hedefi ve küresel senaryo planları.</p>
+        </div>
+        <span class="text-[10px] font-bold text-purple-700 mt-3 block uppercase tracking-wider">#AltTema-03</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliğinde Yeni Yaklaşımlar ve Gelecek Perspektifi</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Disiplinler arası yeni çözüm metodolojileri ve yenilikçi iklim stratejileri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-teal-700 mt-3 block uppercase tracking-wider">#AltTema-04</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-base mb-3 group-hover:bg-rose-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-house-chimney-crack"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliği ve Afet Yönetimi</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">İklim kökenli afetlere hazırlık, kriz müdahale planları ve kentsel dirençlilik.</p>
+        </div>
+        <span class="text-[10px] font-bold text-rose-700 mt-3 block uppercase tracking-wider">#AltTema-05</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-frog"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliği, Ekosistemler ve Biyoçeşitlilik</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Habitat kayıpları, türlerin göç hareketleri ve karasal-sucul ekolojik dengeler.</p>
+        </div>
+        <span class="text-[10px] font-bold text-emerald-700 mt-3 block uppercase tracking-wider">#AltTema-06</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base mb-3 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliği ve Doğal Kaynakların Korunması</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Toprak sağlığı, orman varlıkları ve yer altı kaynaklarının sürdürülebilir yönetimi.</p>
+        </div>
+        <span class="text-[10px] font-bold text-amber-700 mt-3 block uppercase tracking-wider">#AltTema-07</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-base mb-3 group-hover:bg-cyan-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Tarım, Gıda ve Su Güvenliği</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Kuraklığa dayanıklı tarım ürünleri, akıllı sulama ve gıda tedarik güvencesi.</p>
+        </div>
+        <span class="text-[10px] font-bold text-cyan-700 mt-3 block uppercase tracking-wider">#AltTema-08</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Okyanuslar, Denizler, Kıyı Alanları ve İklim Değişikliği</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Deniz suyu ısınması, asitlenme, kıyı erozyonu ve denizel biyoçeşitlilik.</p>
+        </div>
+        <span class="text-[10px] font-bold text-blue-700 mt-3 block uppercase tracking-wider">#AltTema-09</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-base mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliği ve İnsan Sağlığı</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Sıcak hava dalgaları, bulaşıcı hastalık riskleri ve temiz hava hakkı.</p>
+        </div>
+        <span class="text-[10px] font-bold text-red-700 mt-3 block uppercase tracking-wider">#AltTema-10</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center text-base mb-3 group-hover:bg-violet-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Adaleti, Eşitsizlikler ve Kırılgan Gruplar</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Dezavantajlı kesimlerin hakları, kuşaklar arası adalet ve kapsayıcı çözümler.</p>
+        </div>
+        <span class="text-[10px] font-bold text-violet-700 mt-3 block uppercase tracking-wider">#AltTema-11</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-base mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-person-walking-luggage"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Göçü ve Dezavantajlı Gruplar</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Çevresel faktörlerle zorunlu yer değiştirme, mülteci hakları ve entegrasyon.</p>
+        </div>
+        <span class="text-[10px] font-bold text-orange-700 mt-3 block uppercase tracking-wider">#AltTema-12</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-stone-50 text-stone-600 flex items-center justify-center text-base mb-3 group-hover:bg-stone-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliğinin Sosyal, Kültürel ve Ekonomik Etkileri</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">İş gücü piyasaları, yerel kültürel miras ve makroekonomik risk değerlendirmesi.</p>
+        </div>
+        <span class="text-[10px] font-bold text-stone-700 mt-3 block uppercase tracking-wider">#AltTema-13</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Eğitimi ve Sürdürülebilirlik Eğitimi</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Öğretim programlarında ekolojik pedagoji, okul projeleri ve eko-etkinlikler.</p>
+        </div>
+        <span class="text-[10px] font-bold text-emerald-700 mt-3 block uppercase tracking-wider">#AltTema-14</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Okuryazarlığı, İletişimi ve Toplumsal Farkındalık</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Doğru bilgi akışı, kamuoyu kampanyaları ve gençlik hareketlerinin rolü.</p>
+        </div>
+        <span class="text-[10px] font-bold text-teal-700 mt-3 block uppercase tracking-wider">#AltTema-15</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-lime-50 text-lime-600 flex items-center justify-center text-base mb-3 group-hover:bg-lime-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliği, Kentleşme ve Mekânsal Planlama</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Isı adalarıyla mücadele, akıllı şehir imar planları ve yeşil koridorlar.</p>
+        </div>
+        <span class="text-[10px] font-bold text-lime-700 mt-3 block uppercase tracking-wider">#AltTema-16</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-zinc-50 text-zinc-600 flex items-center justify-center text-base mb-3 group-hover:bg-zinc-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-building-shield"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Dirençli Kentler ve Yerel Yönetimler</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Belediyelerin yerel iklim eylem planları ve sürdürülebilir kentsel drenaj.</p>
+        </div>
+        <span class="text-[10px] font-bold text-zinc-700 mt-3 block uppercase tracking-wider">#AltTema-17</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Yeşil ve Mavi Altyapı ile Doğa Temelli Çözümler</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Yağmur bahçeleri, göletler, yeşil çatılar ve doğal tampon bölgeler.</p>
+        </div>
+        <span class="text-[10px] font-bold text-emerald-700 mt-3 block uppercase tracking-wider">#AltTema-18</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-base mb-3 group-hover:bg-cyan-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Kentlerde İklim Değişikliğine Uyum ve Dayanıklılık</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Kentsel altyapıların aşırı sıcaklık ve su baskınlarına karşı güçlendirilmesi.</p>
+        </div>
+        <span class="text-[10px] font-bold text-cyan-700 mt-3 block uppercase tracking-wider">#AltTema-19</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base mb-3 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-solar-panel"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Enerji Dönüşümü, Yenilenebilir Enerji ve Karbonsuzlaşma</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Güneş, rüzgar, yeşil hidrojen ve temiz enerji şebekelerine geçiş modelleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-amber-700 mt-3 block uppercase tracking-wider">#AltTema-20</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-base mb-3 group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Teknolojileri, Yapay Zekâ ve Dijital Çözümler</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Yapay zeka ile karbon hesabı, IoT sensör ağları ve dijital çevre ikizleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-sky-700 mt-3 block uppercase tracking-wider">#AltTema-21</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-base mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim İnovasyonu ve Girişimcilik</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Genç girişimciler için yeşil kuluçka merkezleri ve temiz teknoloji girişimleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-orange-700 mt-3 block uppercase tracking-wider">#AltTema-22</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-recycle"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Döngüsel Ekonomi, Sürdürülebilir Tüketim ve Üretim</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Sıfır atık, endüstriyel simbiyoz, geri dönüşüm ve yaşam döngüsü analizi.</p>
+        </div>
+        <span class="text-[10px] font-bold text-emerald-700 mt-3 block uppercase tracking-wider">#AltTema-23</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-gavel"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Politikaları, Hukuku ve Yönetişim</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">İklim kanunları, karbon vergisi mevzuatı ve kamu yönetişim modelleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-purple-700 mt-3 block uppercase tracking-wider">#AltTema-24</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Uluslararası İklim Antlaşmaları ve Küresel İklim Yönetişimi</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Paris Anlaşması, COP zirveleri kararları ve küresel taahhütler.</p>
+        </div>
+        <span class="text-[10px] font-bold text-blue-700 mt-3 block uppercase tracking-wider">#AltTema-25</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Sürdürülebilirlik Perspektifinden İklim Finansmanı ve Yatırımlar</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Yeşil tahviller, karbon kredileri ve sürdürülebilir ESG fon modelleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-emerald-700 mt-3 block uppercase tracking-wider">#AltTema-26</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliğine Uyum, Azaltım ve Dirençlilik Stratejileri</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Sektörel karbon azaltım hedefleri ve uzun vadeli adaptasyon planları.</p>
+        </div>
+        <span class="text-[10px] font-bold text-teal-700 mt-3 block uppercase tracking-wider">#AltTema-27</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-base mb-3 group-hover:bg-rose-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Kayıp ve Zararlar (Loss and Damage), Adil Geçiş ve İklim Dayanışması</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">İklim krizinden en çok etkilenen coğrafyalar için adil tazmin mekanizmaları.</p>
+        </div>
+        <span class="text-[10px] font-bold text-rose-700 mt-3 block uppercase tracking-wider">#AltTema-28</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Değişikliği ve Eğitim Programları</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Disiplinler arası iklim ders içerikleri ve öğrenci temelli atölye modelleri.</p>
+        </div>
+        <span class="text-[10px] font-bold text-indigo-700 mt-3 block uppercase tracking-wider">#AltTema-29</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-lime-50 text-lime-600 flex items-center justify-center text-base mb-3 group-hover:bg-lime-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">Yeşil Okul ve Yeşil Eğitim</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Sıfır atıklı okul bahçeleri, enerji üreten eğitim kampüsleri ve yeşil bayrak.</p>
+        </div>
+        <span class="text-[10px] font-bold text-lime-700 mt-3 block uppercase tracking-wider">#AltTema-30</span>
+      </div>
+
+      <div class="tema-karti w-[calc(50%-8px)] sm:w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/4)] lg:w-[calc((100%-80px)/6)] shrink-0 snap-start bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-base mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors shadow-inner">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <h3 class="font-title font-bold text-[13px] text-slate-800 mb-1.5 leading-snug">İklim Haberciliği</h3>
+          <p class="text-[11px] text-slate-500 leading-relaxed line-clamp-3">Çevre gazeteciliği, doğru veri aktarımı, yanıltıcı yeşil aklama (greenwashing) takibi.</p>
+        </div>
+        <span class="text-[10px] font-bold text-red-700 mt-3 block uppercase tracking-wider">#AltTema-31</span>
+      </div>
+
+    </div>
+
+    <div class="w-full max-w-xs mx-auto mt-4 bg-slate-200 h-1.5 rounded-full overflow-hidden">
+      <div id="themeProgressBar" class="bg-brand-emerald h-full w-1/4 transition-all duration-300 rounded-full"></div>
+    </div>
+
+  </div>
+</section>
+  <section id="istatistikler" class="py-16 sm:py-20 bg-white relative overflow-hidden border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div class="reveal-heading mb-12 pb-4 border-b border-slate-200/80">
+      <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-800 tracking-tight">
+        Rakamlarla Sempozyum
+      </h2>
+      <div class="w-14 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2.5"></div>
+    </div>
+
+    <!-- 4 Kart Tek Sıra & Aynı Hizada -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+
+      <!-- 1. Sözlü Bildiri -->
+      <div class="flex flex-col items-center justify-between p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-xs hover:shadow-md transition-all text-center">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-700 ring-4 ring-white shadow-md flex items-center justify-center text-3xl mb-4">
+          <i class="fa-regular fa-file-lines"></i>
+        </div>
+        <span data-istatistik="bildiri" aria-live="polite" class="stat-number font-title font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight my-1">1</span>
+        <span class="text-xs font-title font-bold text-slate-600 uppercase tracking-wider">Sözlü Bildiri Başvurusu</span>
+      </div>
+
+      <!-- 2. Poster Bildiri -->
+      <div class="flex flex-col items-center justify-between p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-xs hover:shadow-md transition-all text-center">
+        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-700 ring-4 ring-white shadow-md flex items-center justify-center text-3xl mb-4">
+          <i class="fa-solid fa-chalkboard-user"></i>
+        </div>
+        <span data-istatistik="poster" aria-live="polite" class="stat-number font-title font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight my-1">0</span>
+        <span class="text-xs font-title font-bold text-slate-600 uppercase tracking-wider">Poster Bildiri Başvurusu</span>
+      </div>
+
+      <!-- 3. Katılımcı Okul & Kurum -->
+      <div class="flex flex-col items-center justify-between p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-xs hover:shadow-md transition-all text-center">
+        <div class="w-16 h-16 rounded-2xl bg-indigo-100 text-indigo-700 ring-4 ring-white shadow-md flex items-center justify-center text-3xl mb-4">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <span data-istatistik="okul" aria-live="polite" class="stat-number font-title font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight my-1">1</span>
+        <span class="text-xs font-title font-bold text-slate-600 uppercase tracking-wider">Katılımcı Okul & Kurum</span>
+      </div>
+
+      <!-- 4. Çalışmalar Devam Ediyor (Aynı Boyutta ve Hizada Kart) -->
+      <div class="flex flex-col items-center justify-between p-6 rounded-2xl bg-emerald-50/80 border border-emerald-200 shadow-xs hover:shadow-md transition-all text-center">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-600 text-white ring-4 ring-white shadow-md flex items-center justify-center text-3xl mb-4">
+          <i class="fa-solid fa-bars-progress"></i>
+        </div>
+        <span class="font-title font-bold text-base sm:text-lg text-emerald-900 tracking-tight my-2 leading-snug">
+          Çalışmalar devam ediyor
+        </span>
+        <span class="text-xs text-emerald-700 font-medium">Değerlendirme & Planlama</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <section id="sss" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 pb-4 border-b border-slate-200/80">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-800 tracking-wide uppercase">
+          SIKÇA SORULAN SORULAR
+        </h2>
+        <div class="w-14 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2.5"></div>
+      </div>
+      
+      <!-- Tüm SSS'leri Göster Butonu -->
+      <button data-modal-open="allFaqModal" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs font-title font-bold text-slate-700 hover:text-white hover:bg-brand-emerald hover:border-brand-emerald shadow-xs transition-all self-start sm:self-auto group">
+        <span>Tüm Soruları İncele (10 Soru)</span>
+        <i class="fa-solid fa-up-right-from-square text-[11px] group-hover:scale-110 transition-transform"></i>
+      </button>
+    </div>
+
+    <!-- Ana Sayfada Gözüken İlk 4 Soru -->
+    <div class="max-w-4xl space-y-4">
+      
+      <!-- Soru 1 -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+        <button data-faq-toggle class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-title font-bold text-slate-800 hover:text-emerald-700 transition-colors">
+          <span class="text-sm sm:text-base">1. Kimler başvuru yapabilir?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+          Eskişehir’de bulunan proje okulları, Anadolu liseleri ile BİLSEM olmak üzere 19 okulun öğrencileri kendi okul idaresine başvuru yaparak, e-mail aracılığıyla/web sayfasından başvuru yaparak katılabilir.
+        </div>
+      </div>
+
+      <!-- Soru 2 -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+        <button data-faq-toggle class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-title font-bold text-slate-800 hover:text-emerald-700 transition-colors">
+          <span class="text-sm sm:text-base">2. Bildiri başvurusu nasıl yapabilirim?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+          Bu proje Eskişehir’de proje okulları arasında yapılmaktadır. Bu okullarda okuyan öğrenciler okulundaki ilgili öğretmene veya müdür yardımcısına giderek başvuru yapabilir. Ayrıca proje web sayfasında bildiri menüsü tıklanarak, yönergeler takip edilebilir.
+        </div>
+      </div>
+
+      <!-- Soru 3 -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+        <button data-faq-toggle class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-title font-bold text-slate-800 hover:text-emerald-700 transition-colors">
+          <span class="text-sm sm:text-base">3. Etkileyici sunum yapma teknikleri nelerdir?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+          Etkileyici sunum yapmak için sizler için oluşturduğumuz dokümana bakabilirsiniz. <a href="#" class="text-emerald-600 font-semibold hover:underline">Ulaşmak için tıklayınız.</a>
+        </div>
+      </div>
+
+      <!-- Soru 4 -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+        <button data-faq-toggle class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-title font-bold text-slate-800 hover:text-emerald-700 transition-colors">
+          <span class="text-sm sm:text-base">4. Bildiri hazırlama kuralları nelerdir?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+          <p class="mb-2">Web sayfamızda yer alan bildiri ve poster hazırlama kılavuzundan yararlanabilirsiniz. Dikkat edilmesi gereken önemli noktalar:</p>
+          <ul class="list-disc list-inside space-y-1.5 pl-1">
+            <li>Araştırmanın yazı dilinin sade ve akıcı ve anlaşılır şekilde kaleme alınması gerekmektedir.</li>
+            <li>Times New Roman, 12 punto, 1,5 satır aralığı ve iki yana yasla formatında yazılacaktır.</li>
+            <li>Sayfa düzeni; üst ve alt boşluk 3 cm, sol boşluk 4 cm ve sağ boşluk 2,5 cm olacaktır.</li>
+            <li>APA 7- Yazım Kuralları ve Kaynak Gösterme kuralları geçerlidir.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <section id="paydaslar" class="py-16 sm:py-20 bg-white relative overflow-hidden border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div class="reveal-heading mb-12 pb-4 border-b border-slate-200/80">
+      <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-800 tracking-tight">
+        Paydaşlarımız
+      </h2>
+      <div class="w-14 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2.5"></div>
+    </div>
+
+    
+    <ul class="flex flex-wrap gap-4 sm:gap-6">
+              <li class="notice-card shrink-0 w-[calc(50%-8px)] sm:w-44">
+                                <a href="https://www.anadolu.edu.tr" target="_blank" rel="noopener noreferrer" title="Anadolu Üniversitesi – web sitesi" class="h-28 sm:h-32 flex flex-col items-center justify-center gap-2 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 text-center group">
+                                    
+              <img src="images/paydaslar/anadolu-universitesi.svg" alt="" class="h-11 sm:h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <span class="font-title font-semibold text-[11px] sm:text-xs text-slate-700 leading-tight">Anadolu Üniversitesi</span>
+                        <span class="sr-only">(yeni sekmede açılır)</span>
+            </a>
+                  </li>
+              <li class="notice-card shrink-0 w-[calc(50%-8px)] sm:w-44 reveal-delay-1">
+                                <a href="https://www.ogu.edu.tr" target="_blank" rel="noopener noreferrer" title="Eskişehir Osmangazi Üniversitesi – web sitesi" class="h-28 sm:h-32 flex flex-col items-center justify-center gap-2 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 text-center group">
+                                    
+              <img src="images/paydaslar/eskisehir-osmangazi-universitesi.png" alt="" class="h-11 sm:h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <span class="font-title font-semibold text-[11px] sm:text-xs text-slate-700 leading-tight">Eskişehir Osmangazi Üniversitesi</span>
+                        <span class="sr-only">(yeni sekmede açılır)</span>
+            </a>
+                  </li>
+              <li class="notice-card shrink-0 w-[calc(50%-8px)] sm:w-44 reveal-delay-2">
+                                <a href="https://www.eskisehir.edu.tr" target="_blank" rel="noopener noreferrer" title="Eskişehir Teknik Üniversitesi – web sitesi" class="h-28 sm:h-32 flex flex-col items-center justify-center gap-2 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 text-center group">
+                                    
+              <img src="images/paydaslar/eskisehir-teknik-universitesi.png" alt="" class="h-11 sm:h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <span class="font-title font-semibold text-[11px] sm:text-xs text-slate-700 leading-tight">Eskişehir Teknik Üniversitesi</span>
+                        <span class="sr-only">(yeni sekmede açılır)</span>
+            </a>
+                  </li>
+          </ul>
+
+  </div>
+</section>
+  <section id="katilimci-okullar" class="py-16 sm:py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div class="reveal-heading mb-12 pb-4 border-b border-slate-200/80">
+      <h2 class="text-2xl sm:text-3xl font-title font-extrabold text-slate-800 tracking-tight">
+        Katılımcı Okullarımız
+      </h2>
+      <div class="w-14 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2.5"></div>
+    </div>
+
+    <div class="reveal relative w-full">
+      <div class="pointer-events-none absolute left-0 inset-y-0 w-12 sm:w-16 bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
+      <div class="pointer-events-none absolute right-0 inset-y-0 w-12 sm:w-16 bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
+
+      <div id="partnersTrack" class="no-scrollbar flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth py-4 px-2 cursor-grab active:cursor-grabbing select-none">
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Eskişehir ETİ Sosyal Bilimler Lisesi">
+                          <img src="images/okullar/okul8.png" alt="Eskişehir ETİ Sosyal Bilimler Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Eskişehir Fatih Fen Lisesi">
+                          <img src="images/okullar/okul7.png" alt="Eskişehir Fatih Fen Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Atatürk Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Atatürk Lisesi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Hacı Süleyman Çakır Kız Anadolu Lisesi">
+                          <img src="images/okullar/haci-suleyman-cakir-kiz-anadolu-lisesi.png" alt="Hacı Süleyman Çakır Kız Anadolu Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Eskişehir Anadolu İmam Hatip Lisesi">
+                          <img src="images/okullar/okul1.png" alt="Eskişehir Anadolu İmam Hatip Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Hüseyin Erçelebi Anadolu Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Hüseyin Erçelebi Anadolu Lisesi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Emine-Emir Şahbaz Bilim ve Sanat Merkezi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Emine-Emir Şahbaz Bilim ve Sanat Merkezi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="TEV Tuna Orhan Nail İzgi Anadolu Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">TEV Tuna Orhan Nail İzgi Anadolu Lisesi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Beyhan Rıfat Çıkılıoğlu Anadolu Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Beyhan Rıfat Çıkılıoğlu Anadolu Lisesi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Eskişehir Anadolu Lisesi">
+                          <img src="images/okullar/okul6.jpg" alt="Eskişehir Anadolu Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Cemal Mümtaz Sosyal Bilimler Lisesi">
+                          <img src="images/okullar/okul3.jpg" alt="Cemal Mümtaz Sosyal Bilimler Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Şehit Mehmet Şengül Fen Lisesi">
+                          <img src="images/okullar/okul5.jpg" alt="Şehit Mehmet Şengül Fen Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Borsa İstanbul Fen Lisesi">
+                          <img src="images/okullar/okul9.jpg" alt="Borsa İstanbul Fen Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Uluslararası Cevat Ülger Anadolu İmam Hatip Lisesi">
+                          <img src="images/okullar/okul4.png" alt="Uluslararası Cevat Ülger Anadolu İmam Hatip Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Eskişehir Kız Anadolu İmam Hatip Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Eskişehir Kız Anadolu İmam Hatip Lisesi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="TOBB Bilim ve Sanat Merkezi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">TOBB Bilim ve Sanat Merkezi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Ali Güven Turizm Mesleki ve Teknik Anadolu Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Ali Güven Turizm Mesleki ve Teknik Anadolu Lisesi</span>
+              </div>
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Beylikova Fen Lisesi">
+                          <img src="images/okullar/okul2.jpg" alt="Beylikova Fen Lisesi" draggable="false" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+                      </div>
+                  <div class="shrink-0 w-[calc(50%-8px)] sm:w-44 h-28 sm:h-32 bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group" title="Fahri Keskin Fen Lisesi">
+                          <div class="flex flex-col items-center justify-center gap-1.5 text-center">
+                <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-school"></i></span>
+                <span class="font-title font-semibold text-[11px] text-slate-700 leading-tight line-clamp-3">Fahri Keskin Fen Lisesi</span>
+              </div>
+                      </div>
+              </div>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <footer id="iletisim" class="bg-slate-900 text-slate-300 relative overflow-hidden border-t border-slate-800">
+  <div class="h-1.5 w-full bg-gradient-to-r from-emerald-600 via-teal-500 to-amber-500"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+
+      <!-- Marka -->
+      <div class="sm:col-span-2 lg:col-span-4 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+            <i class="fa-solid fa-leaf text-lg"></i>
+          </div>
+          <div>
+            <span class="block font-title font-extrabold text-white text-lg tracking-wider">ESGES 2027</span>
+            <span class="text-[11px] text-emerald-400 font-medium block">Eskişehir Geleceğin Sesi Sempozyumu</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed pr-2">
+          Eskişehir İl Millî Eğitim Müdürlüğü koordinasyonunda, genç bilim insanlarının geleceğe etki edecek fen ve sosyal bilimler araştırmalarını ortaya koymayı amaçlayan öğrenci sempozyumudur.
+        </p>
+
+        
+        <div class="pt-2">
+          <span class="block text-[10px] uppercase tracking-widest text-slate-500 font-semibold mb-2.5">Bizi Takip Edin</span>
+          <ul class="flex items-center gap-2.5">
+                          <li>
+                <a href="https://www.facebook.com/eskisehirmem/" target="_blank" rel="noopener noreferrer" title="Facebook" class="sosyal-ikon sosyal-facebook">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                  <span class="sr-only">Eskişehir İl Millî Eğitim Müdürlüğü Facebook hesabı (yeni sekmede açılır)</span>
+                </a>
+              </li>
+                          <li>
+                <a href="https://twitter.com/EskisehirMem" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="sosyal-ikon sosyal-x">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                  <span class="sr-only">Eskişehir İl Millî Eğitim Müdürlüğü X (Twitter) hesabı (yeni sekmede açılır)</span>
+                </a>
+              </li>
+                          <li>
+                <a href="https://www.instagram.com/eskisehirmem/" target="_blank" rel="noopener noreferrer" title="Instagram" class="sosyal-ikon sosyal-instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                  <span class="sr-only">Eskişehir İl Millî Eğitim Müdürlüğü Instagram hesabı (yeni sekmede açılır)</span>
+                </a>
+              </li>
+                          <li>
+                <a href="https://www.youtube.com/c/eskisehirilmilliegitimmudurlugu" target="_blank" rel="noopener noreferrer" title="YouTube" class="sosyal-ikon sosyal-youtube">
+                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                  <span class="sr-only">Eskişehir İl Millî Eğitim Müdürlüğü YouTube hesabı (yeni sekmede açılır)</span>
+                </a>
+              </li>
+                      </ul>
+        </div>
+      </div>
+
+      <!-- Kurumsal -->
+      <nav class="lg:col-span-2 space-y-4" aria-label="Kurumsal">
+        <h4 class="font-title font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>KURUMSAL</span>
+        </h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="#" data-modal-open="textModal" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Çağrı Metni</span></a></li>
+          <li><a href="#alt-temalar" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Konular</span></a></li>
+          <li><a href="#sss" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Sıkça Sorulanlar</span></a></li>
+          <li><a href="#harita" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>İletişim ve Harita</span></a></li>
+          <li><a href="#" data-modal-open="onizleme-takipModal" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Başvurumu Görüntüle</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Sayfalar -->
+      <nav class="lg:col-span-2 space-y-4" aria-label="Sayfalar">
+        <h4 class="font-title font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+          <span>SAYFALAR</span>
+        </h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="#" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Haberler</span></a></li>
+          <li><a href="#" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>KVKK Aydınlatma Metni</span></a></li>
+          <li><a href="#" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Çerez Politikası</span></a></li>
+          <li><a href="#" class="footer-link"><i class="fa-solid fa-angle-right"></i><span>Gizlilik Sözleşmesi</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- İletişim -->
+      <address class="sm:col-span-2 lg:col-span-4 space-y-4 not-italic">
+        <h4 class="font-title font-bold text-white text-xs uppercase tracking-widest flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span>İLETİŞİM BİLGİLERİ</span>
+        </h4>
+        <ul class="space-y-3.5 text-xs text-slate-400">
+          <li class="flex items-start gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-0.5">Telefon</span>
+              <a href="tel:+902222802600" class="hover:text-emerald-400 transition-colors">0 222 280 26 00</a>
+              <span class="text-slate-600 mx-1">/</span>
+              <a href="tel:+902222802629" class="hover:text-emerald-400 transition-colors">0 222 280 26 29</a>
+              <span class="text-slate-600 mx-1">/</span>
+              <a href="tel:+902222802674" class="hover:text-emerald-400 transition-colors">0 222 280 26 74</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-fax"></i></span>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-0.5">Belgegeçer</span>
+              <span>0 222 280 27 28</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-0.5">Adres</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=B%C3%BCy%C3%BCkdere%20Mahallesi%20Atat%C3%BCrk%20Bulvar%C4%B1%20No%20247%2026040%20Odunpazar%C4%B1%20Eski%C5%9Fehir" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors">Büyükdere Mahallesi Atatürk Bulvarı No 247 26040 Odunpazarı / Eskişehir</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-0.5">E-posta</span>
+              <a href="mailto:esges2027@gmail.com" class="text-emerald-400 hover:underline font-semibold">esges2027@gmail.com</a>
+            </div>
+          </li>
+        </ul>
+      </address>
+    </div>
+
+    
+    <div id="harita" class="mt-12 rounded-2xl border border-slate-800 bg-slate-800/50 overflow-hidden grid grid-cols-1 md:grid-cols-5 scroll-mt-28">
+      <div class="relative md:col-span-3 h-48 sm:h-56 md:h-full md:min-h-[13rem] overflow-hidden">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=39.756761%2C30.493972" target="_blank" rel="noopener noreferrer" class="group block w-full h-full">
+          <img src="images/harita-eskisehir-il-mem.webp" width="1280" height="560" loading="lazy"
+               alt="Eskişehir İl Millî Eğitim Müdürlüğü'nün Atatürk Bulvarı üzerindeki konumunu gösteren harita"
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <span class="harita-igne absolute left-1/2 top-1/2 text-rose-600 text-4xl" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+          <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-slate-800 text-[11px] font-title font-bold shadow-lg group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i><span>Google Haritalar'da Aç</span>
+          </span>
+          <span class="sr-only">(yeni sekmede açılır)</span>
+        </a>
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="absolute right-1.5 bottom-1.5 px-1.5 py-0.5 rounded bg-white/85 text-[10px] text-slate-700 hover:text-emerald-700">© OpenStreetMap katkıda bulunanlar</a>
+      </div>
+
+      <div class="md:col-span-2 p-5 sm:p-6 flex flex-col justify-center gap-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 shrink-0 rounded-2xl bg-emerald-600/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          </div>
+          <div>
+            <span class="block font-title font-bold text-white text-sm">Eskişehir İl Millî Eğitim Müdürlüğü</span>
+            <span class="block text-xs text-slate-400 mt-1 leading-relaxed">Büyükdere Mahallesi Atatürk Bulvarı No 247 26040 Odunpazarı / Eskişehir</span>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=39.756761%2C30.493972"
+           target="_blank" rel="noopener noreferrer"
+           class="self-start inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-title font-bold shadow-lg shadow-black/30 transition-all hover:-translate-y-0.5">
+          <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+          <span>Yol Tarifi Al</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 text-center sm:text-left">
+      <p>© 2027 ESGES - Eskişehir Geleceğin Sesi Sempozyumu. Tüm hakları saklıdır.</p>
+      <p>Eskişehir İl Millî Eğitim Müdürlüğü</p>
+    </div>
+  </div>
+</footer>
+  <div class="bg-slate-950 text-slate-400 text-center text-xs py-3 px-4">
+    Bu sayfa ESGES 2027 web sitesinin ana sayfa tasarımına ait <strong class="text-white">önizlemedir</strong>; formlar ve bazı bağlantılar çalışmaz.
+  </div>
+
+  
+  <div id="textModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4">
+  <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+    <div class="p-5 sm:p-6 bg-gradient-to-r from-emerald-800 to-teal-800 text-white flex items-center justify-between shrink-0">
+      <div>
+        <span class="text-xs font-title font-bold text-emerald-300 uppercase tracking-widest">Resmi Belge</span>
+        <h3 class="font-title font-extrabold text-lg sm:text-xl mt-0.5">ESKİŞEHİR GELECEĞİN SESİ SEMPOZYUMU (ESGES)</h3>
+      </div>
+      <button data-modal-close="textModal" class="text-white/80 hover:text-white p-2 text-xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    
+    <div class="p-4 sm:p-6 overflow-y-auto space-y-4 text-sm text-slate-700 leading-relaxed font-sans bg-slate-50">
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <p class="font-title font-bold text-emerald-800 text-base mb-3">Değerli Genç Bilim İnsanları, Araştırmacı, Öğretmen ve Öğrencilerimiz,</p>
+        <p class="text-justify">Millî Eğitim Temel Kanunu’nda belirtildiği gibi millî, ahlaki, insani, manevi ve kültürel değerlerimizi gelecek nesillere aktarırken millî mücadelemizin köklü hatırasını yaşatmak üzere Türkiye Cumhuriyeti’nin kuruluşunun 100.yılında Türk milletinin tarih yolculuğundaki varoluş mücadelesi bilim ve teknoloji ile desteklenerek günümüz dinamiklerini anlamak ve gelecek vizyonuna yeni perspektifler kazandırmak amacıyla ESKİŞEHİR GELECEĞİN SESİ SEMPOZYUMU’nun (ESGES) üçüncüsü gerçekleştirilecektir.</p>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-slate-800 text-base mb-3">
+          <span class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-landmark"></i></span>
+          ESGES’in Doğuşu ve Amacı
+        </h4>
+        <p class="text-justify">Eskişehir İl Milli Eğitim Müdürlüğü tarafından ilki 2023-2024 eğitim-öğretim yılında gerçekleştirilen ESGES Öğrenci Sempozyumu ile Türkiye Yüzyılı'na dair genç bilim insanlarının geleceğe etki edecek fen ve sosyal bilimler alanındaki konular ile ilgili düşünce, beklentileri ve araştırmalarını ortaya koymak amaçlanmaktadır. Eskişehir’de gerçekleştirilen ilk öğrenci sempozyumu olarak nitelendirilebilecek ESGES’in Cumhuriyetin 100. Yılında başlaması da bizim için ayrı bir gurur olarak ifade edilebilir. 2023 yılında proje okullarımızın katılımıyla bir fikir olarak ortaya çıkan ESGES’in Müdürlüğümüzce her yıl farklı konularla düzenlenmesi planlanmaktadır.</p>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-slate-800 text-base mb-3">
+          <span class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-flask"></i></span>
+          Sempozyumun Kazanımları
+        </h4>
+        <p class="text-justify">ESGES Öğrenci Sempozyumu ile öğrencilerimizin bilimsel projelerini sergilemelerine olanak sağlanacak, fen ve sosyal bilimler alanlarında çalışan bilim insanları ile öğrenciler bir araya getirilerek ilgili disiplinlerde bilgi ve etkileşim güçlendirilecek, genç bilim insanlarının yetişmesine katkıda bulunulacak, bilimsel araştırma tekniklerinde öğrencilerimize farkındalık kazandırılacaktır.</p>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-slate-800 text-base mb-3">
+          <span class="w-9 h-9 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
+          Neden Gençlerin Sesi?
+        </h4>
+        <p class="text-justify">Değişen ve gelişen çağda, eğitim sistemleri toplumsal, teknolojik ve kültürel dönüşümlere ayak uydurmak zorundadır. Bu süreçte en çok etkilenen kesim olarak nitelendirilebilecek siz değerli öğrencilerimizin, eğitim hakkındaki görüş ve deneyimlerinin dikkate alınması büyük önem taşımaktadır. Gençlerin beklenti ve önerilerini merkeze alan bir sempozyum, daha katılımcı ve etkili bir eğitim anlayışının oluşmasına katkı sağlayacaktır. Türkiye’nin dünyada yükselen bir ülke konumuna gelebilmesi öğrencilerimizin ve öğretmenlerimizin bilimsel çalışmaları, araştırma projeleri üretebilme gibi bilimsel alandaki katkıları ile mümkün olabilecektir.</p>
+      </section>
+
+      
+      <section class="rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-teal-50 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-emerald-900 text-base mb-3">
+          <span class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></span>
+          Sempozyum Teması
+        </h4>
+        <p class="text-justify font-semibold text-slate-800">ESGES’in ilk teması, öğrencilerimizin görüşleriyle belirlenen, “Havacılık ve Uzay”, ikinci teması ise “Yapay Zeka ve İnsanlığın Geleceği” olarak gerçekleştirilmiştir. Bu yıl üçüncüsünü düzenleyeceğimiz tema ise “Gençlerin Bakış Açısıyla Gelecekte Eğitim” olarak belirlenmiştir.</p>
+        <ol class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <li class="bg-white/80 rounded-xl border border-emerald-100 p-3">
+            <span class="block text-xs font-title font-bold text-slate-500 uppercase tracking-wider">1. ESGES</span>
+            <span class="block font-semibold text-slate-700 mt-1">Havacılık ve Uzay</span>
+          </li>
+          <li class="bg-white/80 rounded-xl border border-emerald-100 p-3">
+            <span class="block text-xs font-title font-bold text-slate-500 uppercase tracking-wider">2. ESGES</span>
+            <span class="block font-semibold text-slate-700 mt-1">Yapay Zeka ve İnsanlığın Geleceği</span>
+          </li>
+          <li class="bg-emerald-700 text-white rounded-xl p-3 shadow">
+            <span class="block text-xs font-title font-bold text-emerald-200 uppercase tracking-wider">3. ESGES – Bu Yıl</span>
+            <span class="block font-semibold mt-1">Gençlerin Bakış Açısıyla Gelecekte Eğitim</span>
+          </li>
+        </ol>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-slate-800 text-base mb-3">
+          <span class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></span>
+          Değerlendirme, Katılım ve Yayın
+        </h4>
+        <p class="text-justify font-semibold text-slate-800">Sempozyuma gönderilen bildiri, poster gibi çalışmaların özeti, Eskişehir’de görev yapan ve doktora düzeyinde öğrenim görmüş deneyimli öğretmenlerimiz tarafından ön değerlendirmelerden geçecektir. Ön değerlendirmeden geçen bildiri ve poster çalışmaları bilimsel kurul tarafından değerlendirilecek ve uygun bulunan çalışmalar kabul edilecektir. Sempozyumda Türkçe olarak sözlü bildiri ya da poster sunumu yapılabilir. Sempozyum kapsamında bu sene ana tema olarak karar verilen Gençlerin Bakış Açısıyla Gelecekte Eğitim alanındaki bildiriler kabul edilecektir. Proje okullarımıza ek olarak bu yıl Eskişehir’de bulunan Anadolu ve Meslek Liselerimiz ile BİLSEMlerde öğrenim gören öğrencilerimiz danışman öğretmenleri eşliğinde sözlü bildiri ve poster bildiri başvurusu yapacaktır. Sempozyuma katılan bildiriler, sempozyum sonrasında ISBN numarası tahsis edilmiş bildiri kitabında yayınlanacaktır.</p>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-slate-800 text-base mb-3">
+          <span class="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></span>
+          Davet ve Başvuru
+        </h4>
+        <p class="text-justify font-semibold text-slate-800">Sizleri ve öğrencilerimizi 08 Haziran 2026 tarihinde düzenleyeceğimiz ESGES Öğrenci Sempozyumu’nda aramızdan görmekten mutluluk duyarız. Proje bildirilerinin her okulun sorumlu danışman öğretmeni tarafından, okul ve öğrenci bilgileri de eklenerek <a href="mailto:esges2027@gmail.com" class="text-emerald-700 underline underline-offset-2 hover:text-emerald-900">esges2027@gmail.com</a> adresine en geç 02 Ocak 2026 tarihine kadar gönderilmesi gerekmektedir. Gönderdiğiniz öğrenci bildirileri sempozyum bilim kurulu tarafından değerlendirilerek ve intihal çalışması akabinde kabul edilen ya da üzerinde değişiklik yapılması önerilen bildirilerin duyuruları 16 Ocak 2026 tarihinde yapılacaktır.</p>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+        <h4 class="flex items-center gap-3 font-title font-bold text-slate-800 text-base mb-4">
+          <span class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></span>
+          Önemli Bilgiler ve Tarihler
+        </h4>
+        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <span class="block text-xs font-title font-bold text-slate-500 uppercase tracking-wider">Proje Bildirileri Son Gönderim Tarihi</span>
+            <span class="block font-title font-extrabold text-emerald-800 text-base mt-1">02 Ocak 2026</span>
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <span class="block text-xs font-title font-bold text-slate-500 uppercase tracking-wider">Kabul Edilen Bildirilerin İlanı</span>
+            <span class="block font-title font-extrabold text-emerald-800 text-base mt-1">08 Haziran 2026</span>
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <span class="block text-xs font-title font-bold text-slate-500 uppercase tracking-wider">Başvuru Adresi</span>
+            <a href="mailto:esges2027@gmail.com" class="block font-title font-extrabold text-emerald-800 text-sm mt-1 break-words underline underline-offset-2 hover:text-emerald-900">esges2027@gmail.com</a>
+          </li>
+        </ul>
+      </section>
+
+      
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6 text-center">
+        <p>ESGES ile ilgili detaylı bilgi için lütfen ESGES-Eskişehir Geleceğin Sesi Sempozyumu (meb.gov.tr) adresini ziyaret ediniz.</p>
+        <p class="mt-2 font-title font-bold text-emerald-800">Sempozyuma katılımlarınız için teşekkür ederiz.</p>
+      </section>
+
+    </div>
+    <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-end gap-3 shrink-0">
+      <button data-modal-close="textModal" class="px-5 py-2.5 rounded-xl border border-slate-300 text-xs font-title font-bold text-slate-600 hover:bg-slate-100 transition-colors">Kapat</button>
+    </div>
+  </div>
+</div>
+  <div id="onizleme-abstractModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4" role="dialog" aria-modal="true" aria-labelledby="onizleme-abstractModalBaslik">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 text-center shadow-2xl">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-emerald-50 text-brand-emerald flex items-center justify-center text-2xl"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
+      <h2 id="onizleme-abstractModalBaslik" class="font-title font-bold text-lg text-slate-900 mb-2">Bildiri / Poster Başvurusu</h2>
+      <p class="text-sm text-slate-600 leading-relaxed mb-6">Bu sayfa yalnızca tasarım önizlemesidir. Formlar canlı sitede çalışacaktır.</p>
+      <button type="button" data-modal-close="onizleme-abstractModal" class="px-6 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-700 text-white font-title font-bold text-sm">Tamam</button>
+    </div>
+  </div>
+  <div id="alertModal" class="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/80 backdrop-blur-xs hidden p-4" role="alertdialog" aria-modal="true" aria-labelledby="alertTitle">
+  <div class="bg-white rounded-3xl max-w-md w-full shadow-2xl animate-in fade-in zoom-in-95 duration-200 border border-slate-100 overflow-hidden">
+    <div id="alertHeader" class="p-5 flex items-start gap-3 bg-gradient-to-r from-rose-50 to-orange-50 border-b border-rose-100">
+      <div id="alertIcon" class="w-11 h-11 shrink-0 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div class="min-w-0">
+        <h3 id="alertTitle" class="font-title font-bold text-slate-900 text-base leading-snug"></h3>
+        <p id="alertMessage" class="text-xs text-slate-600 mt-1 leading-relaxed"></p>
+      </div>
+    </div>
+    
+    <div id="alertExtra" class="hidden px-5 pt-4 space-y-3"></div>
+    <ul id="alertList" class="px-5 pt-4 space-y-2 text-xs"></ul>
+    <div class="p-5 flex justify-end">
+      <button id="alertOkBtn" data-action="close-alert" class="px-6 py-2.5 rounded-xl bg-brand-accent text-white text-xs font-title font-bold hover:bg-brand-accentHover shadow-md transition-all active:scale-95">Tamam, Düzelteyim</button>
+    </div>
+  </div>
+</div>
+  
+  <div id="kvkkModal" class="fixed inset-0 z-[65] flex items-center justify-center bg-slate-950/75 backdrop-blur-xs hidden p-4" role="dialog" aria-modal="true" aria-labelledby="kvkkModalBaslik">
+  <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+    <div class="p-5 sm:p-6 bg-gradient-to-r from-emerald-700 to-teal-700 text-white flex items-center justify-between gap-4 shrink-0">
+      <div class="flex items-center gap-3 min-w-0">
+        <span class="w-11 h-11 shrink-0 rounded-2xl bg-white/15 border border-white/25 flex items-center justify-center text-lg"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+        <div class="min-w-0">
+          <span class="text-xs font-title font-bold text-emerald-200 uppercase tracking-widest">Kişisel Verilerin Korunması</span>
+          <h3 id="kvkkModalBaslik" class="font-title font-extrabold text-lg sm:text-xl mt-0.5">Kişisel Verilerin Korunması Aydınlatma Metni</h3>
+        </div>
+      </div>
+      <button type="button" data-modal-close="kvkkModal" aria-label="Aydınlatma metnini kapat" class="text-white/80 hover:text-white p-2 text-xl transition-colors"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="p-6 sm:p-8 overflow-y-auto" tabindex="0">
+      <div class="space-y-8 text-base text-slate-700 leading-relaxed">
+  <p>
+    Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca, Eskişehir Geleceğin Sesi
+    Sempozyumu (ESGES 2027) bildiri ve poster başvurusu sırasında işlenen kişisel verileriniz hakkında sizi bilgilendirmek
+    amacıyla hazırlanmıştır.
+  </p>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">1. Veri Sorumlusu</h2>
+    <p>Eskişehir İl Millî Eğitim Müdürlüğü – Büyükdere Mahallesi Atatürk Bulvarı No 247, 26040 Odunpazarı / Eskişehir.</p>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">2. İşlenen Kişisel Veriler</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      <li><strong>Kimlik:</strong> Başvuran öğrencinin adı ve soyadı, danışman öğretmenin adı ve soyadı.</li>
+      <li><strong>İletişim:</strong> E-posta adresi.</li>
+      <li><strong>Eğitim:</strong> Öğrenim görülen okul.</li>
+      <li><strong>Başvuru belgeleri:</strong> Bildiri / poster dosyası, özet, açık rıza formu ve taahhütname.</li>
+      <li><strong>İşlem güvenliği:</strong> Başvurunun yapıldığı tarih-saat, IP adresi ve tarayıcı bilgisi.</li>
+    </ul>
+    <p class="mt-2">Sağlık, din, etnik köken gibi özel nitelikli kişisel veriler istenmez ve işlenmez.</p>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">3. İşleme Amaçları</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      <li>Başvuruların alınması, hakem kurulunca değerlendirilmesi ve sonuçların bildirilmesi,</li>
+      <li>Sempozyum programının ve oturumlarının düzenlenmesi,</li>
+      <li>Kabul edilen bildirilerin tam metin bildiri kitabında yazar adlarıyla birlikte yayımlanması,</li>
+      <li>Başvuru sürecine ilişkin bilgilendirmelerin e-posta ile yapılması,</li>
+      <li>Bilgi güvenliğinin sağlanması ve mevzuattan doğan yükümlülüklerin yerine getirilmesi.</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">4. Kişisel Verilerin Aktarılması</h2>
+    <p>
+      Kişisel verileriniz yalnızca yukarıdaki amaçlarla sınırlı olarak sempozyum düzenleme ve hakem kurulu üyeleri ile
+      Millî Eğitim Bakanlığı birimleriyle paylaşılabilir; kanunen yetkili kamu kurum ve kuruluşlarına yalnızca yasal
+      zorunluluk hâlinde aktarılır. Verileriniz yurt dışına aktarılmaz.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">5. Toplama Yöntemi ve Hukuki Sebep</h2>
+    <p>
+      Verileriniz bu web sitesindeki başvuru formu aracılığıyla elektronik ortamda toplanır. Başvuru verileri KVKK'nın
+      5. maddesinin 1. fıkrası uyarınca <strong>açık rızanıza</strong> dayanılarak; işlem güvenliği kayıtları ise
+      5. maddenin 2. fıkrasının (ç) bendi uyarınca veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi amacıyla işlenir.
+      18 yaşından küçük başvuranlar için veli onayı, başvuruya eklenen Açık Rıza Formu ile alınır.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">6. Saklama Süresi</h2>
+    <p>
+      Başvuru verileri sempozyumun tamamlanmasından itibaren bir yıl süreyle
+      (26 Mayıs 2028 tarihine kadar) saklanır. Bu sürenin
+      sonunda adınız, e-posta adresiniz ve yüklediğiniz belgeler silinir; yalnızca kişiyle ilişkilendirilemeyen istatistiki
+      bilgiler (başvuru türü, alt tema, okul) korunur. Tam metin bildiri kitabında yayımlanan bilgiler yayımın niteliği gereği bu
+      kapsamın dışındadır.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">7. Haklarınız</h2>
+    <p class="mb-2">KVKK'nın 11. maddesi uyarınca veri sorumlusuna başvurarak;</p>
+    <ul class="list-disc pl-5 space-y-1">
+      <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme ve işlenmişse buna ilişkin bilgi talep etme,</li>
+      <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+      <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+      <li>Eksik veya yanlış işlenmişse düzeltilmesini, KVKK'nın 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme ve bu işlemlerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+      <li>Münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
+      <li>Kanuna aykırı işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+    </ul>
+    <p class="mt-2">haklarına sahipsiniz. Açık rızanızı dilediğiniz zaman geri alabilirsiniz; bu durumda başvurunuz değerlendirmeden çıkarılır.</p>
+  </div>
+
+  <div>
+    <h2 class="font-title font-bold text-lg text-slate-900 mb-2">8. Başvuru Yolu</h2>
+    <p>
+      Taleplerinizi başvuru takip kodunuzu belirterek <a href="mailto:esges2027@gmail.com" class="text-brand-emerald font-semibold hover:underline">esges2027@gmail.com</a>
+      adresine veya yukarıdaki adrese yazılı olarak iletebilirsiniz. Başvurunuz en geç otuz gün içinde sonuçlandırılır.
+    </p>
+  </div>
+</div>
+    </div>
+
+    <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end shrink-0">
+      <button type="button" data-modal-close="kvkkModal" class="px-6 py-2.5 rounded-xl bg-brand-emerald hover:bg-brand-darkGreen text-white text-xs font-title font-bold shadow-md transition-all active:scale-95">Okudum, Kapat</button>
+    </div>
+  </div>
+</div>
+  <div id="onizleme-takipModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4" role="dialog" aria-modal="true" aria-labelledby="onizleme-takipModalBaslik">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 text-center shadow-2xl">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-emerald-50 text-brand-emerald flex items-center justify-center text-2xl"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
+      <h2 id="onizleme-takipModalBaslik" class="font-title font-bold text-lg text-slate-900 mb-2">Başvurumu Görüntüle</h2>
+      <p class="text-sm text-slate-600 leading-relaxed mb-6">Bu sayfa yalnızca tasarım önizlemesidir. Formlar canlı sitede çalışacaktır.</p>
+      <button type="button" data-modal-close="onizleme-takipModal" class="px-6 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-700 text-white font-title font-bold text-sm">Tamam</button>
+    </div>
+  </div>
+
+
+<div id="onizleme-talepModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4" role="dialog" aria-modal="true" aria-labelledby="onizleme-talepModalBaslik">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 text-center shadow-2xl">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-emerald-50 text-brand-emerald flex items-center justify-center text-2xl"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
+      <h2 id="onizleme-talepModalBaslik" class="font-title font-bold text-lg text-slate-900 mb-2">Güncelleme Talebi</h2>
+      <p class="text-sm text-slate-600 leading-relaxed mb-6">Bu sayfa yalnızca tasarım önizlemesidir. Formlar canlı sitede çalışacaktır.</p>
+      <button type="button" data-modal-close="onizleme-talepModal" class="px-6 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-700 text-white font-title font-bold text-sm">Tamam</button>
+    </div>
+  </div>
+  <div id="belgeModal" class="fixed inset-0 z-[62] hidden items-center justify-center bg-slate-950/85 backdrop-blur-xs p-2 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="belgeBaslik">
+  <div class="bg-slate-100 rounded-3xl w-full max-w-5xl h-[94vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+    <div class="px-4 sm:px-5 py-3 bg-slate-900 text-white flex flex-wrap items-center gap-3 shrink-0">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-rose-500/20 text-rose-300 flex items-center justify-center" aria-hidden="true"><i class="fa-solid fa-file-pdf text-lg"></i></span>
+      <div class="min-w-0 flex-1">
+        <h3 id="belgeBaslik" class="font-title font-bold text-sm sm:text-base truncate"></h3>
+        <span id="belgeSayfaSayisi" class="block text-xs text-slate-400"></span>
+      </div>
+
+      <div class="w-full sm:w-auto flex items-center justify-end gap-1.5" role="toolbar" aria-label="Görüntüleme araçları">
+        <button type="button" data-belge-olcek="kucult" aria-label="Uzaklaştır" title="Uzaklaştır" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-minus" aria-hidden="true"></i></button>
+        <button type="button" data-belge-olcek="sifirla" title="Pencereye sığdır" class="min-w-14 h-9 px-2 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold tabular-nums"><span id="belgeOlcek">%100</span><span class="sr-only"> – pencereye sığdır</span></button>
+        <button type="button" data-belge-olcek="buyut" aria-label="Yakınlaştır" title="Yakınlaştır" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+        <a id="belgeIndir" href="#" class="ml-1 inline-flex items-center gap-1.5 h-9 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-title font-bold"><i class="fa-solid fa-download" aria-hidden="true"></i><span class="hidden sm:inline">İndir</span><span class="sr-only sm:hidden">İndir</span></a>
+        <button type="button" data-belge-kapat aria-label="Belgeyi kapat" class="ml-1 w-9 h-9 rounded-lg hover:bg-white/15 flex items-center justify-center text-lg"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div id="belgeKaydirma" class="relative flex-1 overflow-auto p-4" tabindex="0" aria-label="Belge sayfaları">
+      <div id="belgeDurum" class="hidden absolute inset-0 flex-col items-center justify-center gap-3 p-6 text-center text-sm text-slate-600" role="status" aria-live="polite">
+        <i id="belgeDurumIkon" class="fa-solid fa-spinner fa-spin text-2xl text-emerald-600" aria-hidden="true"></i>
+        <span id="belgeDurumMetin" class="max-w-sm"></span>
+        
+        <a id="belgeYeniSekme" href="#" target="_blank" rel="noopener" class="hidden items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 font-title font-bold text-white hover:bg-slate-700"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>Belgeyi yeni sekmede aç</a>
+      </div>
+      <div id="belgeSayfalar" class="space-y-4"></div>
+    </div>
+  </div>
+</div>
+  
+  <div id="kurulModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4" role="dialog" aria-modal="true" aria-labelledby="kurulModalBaslik">
+  <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+    <div class="p-5 sm:p-6 bg-gradient-to-r from-emerald-700 to-teal-700 text-white flex items-center justify-between gap-4 shrink-0">
+      <div class="flex items-center gap-3 min-w-0">
+        <span class="w-11 h-11 shrink-0 rounded-2xl bg-white/15 border border-white/25 flex items-center justify-center text-lg" aria-hidden="true"><i id="kurulModalIkon" class="fa-solid fa-users"></i></span>
+        <div class="min-w-0">
+          <span class="text-xs font-title font-bold text-emerald-200 uppercase tracking-widest">ESGES 2027 Kurulları</span>
+          <h3 id="kurulModalBaslik" class="font-title font-extrabold text-lg sm:text-xl mt-0.5"></h3>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <span id="kurulModalSayi" class="hidden sm:inline-block text-xs font-semibold bg-white/15 border border-white/25 rounded-full px-2.5 py-1"></span>
+        <button type="button" data-modal-close="kurulModal" aria-label="Kurul penceresini kapat" class="text-white/80 hover:text-white p-2 text-xl transition-colors"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div class="p-5 sm:p-6 overflow-y-auto" tabindex="0">
+      <ul id="kurulModalListe" class="grid grid-cols-1 md:grid-cols-2 gap-3"></ul>
+    </div>
+
+    <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end shrink-0">
+      <button type="button" data-modal-close="kurulModal" class="px-6 py-2.5 rounded-xl bg-brand-emerald hover:bg-brand-darkGreen text-white text-xs font-title font-bold shadow-md transition-all active:scale-95">Kapat</button>
+    </div>
+  </div>
+</div>
+
+  <template id="kurulSablon-0" data-ad="Sempozyum Düzenleme Kurulu" data-ikon="fa-sitemap" data-sayi="6">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Ali PEHLİVAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">İl Milli Eğitim Müdür Yardımcısı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Burhanettin ELÇİ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">İl Milli Eğitim Şube Müdürü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Funda ÇIRAY ÖZKARA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü Ar-Ge Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Gökay YÜKSEL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü Ar-Ge Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Pınar YAVUZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü Ar-Ge Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">İlaydanur KORKMAZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü Ar-Ge Birimi</span>
+      </li>
+      </template>
+  <template id="kurulSablon-1" data-ad="Sempozyum Bilim Kurulu" data-ikon="fa-flask" data-sayi="39">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Adile Aşkım KURT</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Fakültesi &amp; SODİGEM Müdürü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Alper ÇABUK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Arş. Uyg. Merkezi Müdürü, Mimarlık ve Tasarım Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Aytaç YILDIZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Bursa Teknik Üniversitesi Endüstri Mühendisliği Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Bilge ÇAM AKTAŞ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Erdoğan KAYA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Fakültesi, Türkçe ve Sosyal Bilimler Eğitimi Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Etem KARAKAYA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Eyyüp GÜLBANDILAR</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Mühendislik-Mimarlık Fakültesi, Bilgisayar Mühendisliği Bölümü Bilgisayar Yazılımı ABD.</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Güldane ARAZ AY</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Güzel Sanatlar Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Hakan ACAROĞLU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Hakan Ahmet NEFESLİOĞLU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Yer ve Uzay Bilimleri Enstitüsü, Yer Bilimleri ve Deprem Mühendisliği Anabilim Dalı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Hakan ÖNAL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Balıkesir Necatibey Eğitim Fakültesi, Türkçe ve Sosyal Bilimler Eğitimi Bölümü, Sosyal Bilgiler Eğitimi Anabilim Dalı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Hamit ÖZEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Eğitim Fakültesi, Eğitimde Ölçme ve Değerlendirme</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Haydar ARAS</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Makine Mühendisliği Bölüm Başkanı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. İlknur ŞENTÜRK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Eğitim Fakültesi, Eğitim Bilimleri Bölümü Anabilim Dalı Başkanı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. İrfan SÜRAL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Öğretim Teknolojileri Anabilim Dalı Başkanı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Kamil ÇEKEROL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Açıköğretim Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Mehmet FIRAT</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Fakültesi, Bilgisayar ve Öğretim Teknolojileri Eğitimi Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Melih Cemal KUŞHAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi Havacılık ve Uzay Uygulama ve Araştırma Merkezi (HUZTAM) Müdürü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Meral GÜVEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Bilimleri Bölümü Anabilim Dalı Başkanı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Nazlı GÖKÇE</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Fakültesi, Türkçe ve Sosyal Bilimler Eğitimi Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Sedef DİKMEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi-Fen Fakültesi- Fizik Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Semra GÜNAY</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Turizm Fakültesi, Turizm İşletmeciliği Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Serdar GÖNCÜ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Arş. Uyg. Merkezi Müdürü, Çevre Mühendisliği Bölümü, Çevre Teknolojisi Anabilim Dalı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. T. Hikmet KARAKOÇ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Sivil Havacılık Araştırma ve Uygulama Merkezi Müdürü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Tevfik Volkan YÜZER</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Açıköğretim Fakültesi, Erasmus Programı Kurum Koordinatörü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Turgay ALAKURT</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Kütahya Dumlupınar Üniversitesi, Eğitim Fakültesi Öğretim Teknolojileri Anabilim Dalı Bölüm Başkanı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Yusuf Levent ŞAHİN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi, Eğitim Fakültesi, Bilgisayar ve Öğretim Teknolojisi Eğitimi Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Zehra KAMIŞLI ÖZTÜRK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Mühendislik Fakültesi Endüstri Mühendisliği Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Doç. Dr. Mehmet ERSOY</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Eğitim Fakültesi, Eğitim Bilimleri Bölümü, Öğretim Teknolojileri Anabilim Dalı, Dekan Yardımcısı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Doç. Dr. Muammer TÜN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi Yer ve Uzay Bilimleri Enstitüsü, Yer Bilimleri ve Deprem Mühendisliği Anabilim Dalı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Doç. Dr. Emre EV ÇİMEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Eğitim Fakültesi, Matematik ve Fen Bilimleri Eğitimi Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Doç. Dr. Zehra YİĞİT AVDAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Çevre Mühendisliği Bölümü, Çevre Bilimleri Anabilim Dalı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Ayşe DÖNMEZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Osmangazi Üniversitesi, Eğitim Bilimleri Bölümü, Eğitim Yönetimi ABD.-Dekan Yardımcısı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Burcu ŞİMŞEK UYGUN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Mühendislik Fakültesi / Çevre Mühendisliği Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Emin ÖZEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Kırşehir Ahi Evran Üniversitesi Kaman Uygulamalı Bilimler Yüksekokulu Bilişim Sistemleri ve Teknolojileri Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Metin ALTAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Uydu Uzay Bilimleri Ana Bilim Dalı Başkanı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Murat AYAR</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi, Projeler Koordinatörü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Funda ÇIRAY ÖZKARA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Pınar YAVUZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü</span>
+      </li>
+      </template>
+  <template id="kurulSablon-2" data-ad="Sempozyum Eğitim Kurulu" data-ikon="fa-chalkboard-user" data-sayi="8">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Prof. Dr. Sedef DİKMEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi-Fen Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Doç. Dr. Nil GÖKSEL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi Yabancı Diller Yüksekokulu</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Abdulkadir DURMUŞ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi Eğitim Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Ali Ulus KIMAV</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi Eğitim Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi İnci Zeynep ÖZONAY BÖCÜK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi Eğitim Fakültesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Öğr. Üyesi Emin ÖZEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Kırşehir Ahi Evran Üniversitesi Kaman Uygulamalı Bilimler Yüksekokulu Bilişim Sistemleri ve Teknolojileri Bölümü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Öğr. Gör. Dr. Fatma Nur DEMİR ALADA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi Porsuk Meslek Yüksekokulu / Görsel-İşitsel Teknikler ve Medya Yapımcılığı Bölümü / Basım ve Yayım Teknolojileri Programı</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Öğr. Gör. Dr. Rabia TAŞ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Anadolu Üniversitesi Ar-Ge Ve İnovasyon Koordinasyon Birimi (ARİNKOM)</span>
+      </li>
+      </template>
+  <template id="kurulSablon-3" data-ad="Sempozyum WEB Sitesi &amp; Grafik Tasarım Ekibi" data-ikon="fa-laptop-code" data-sayi="4">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">İbrahim ÇERÇİ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü MEBBİS İl Yöneticisi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Pınar MUTLU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü YEĞİTEK İl Koordinatörü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Meryem YILDIRIM</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü Özel Büro</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Kerim DELİL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Şehit Murat Tuzsuz Mesleki ve Teknik Anadolu Lisesi</span>
+      </li>
+      </template>
+  <template id="kurulSablon-4" data-ad="Grafik Tasarım &amp; Dizgi" data-ikon="fa-pen-ruler" data-sayi="1">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Mustafa ARGUN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Samsun Bilim ve Sanat Merkezi</span>
+      </li>
+      </template>
+  <template id="kurulSablon-5" data-ad="Sempozyum Başvuru Değerlendirme Kurulu" data-ikon="fa-clipboard-check" data-sayi="27">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Abdullah BARS</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Atatürk Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Akın KEKLİK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Şehit Mutlu Yıldırım Ortaokulu</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Ayşenur UZUN TURAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Şehit Mehmet Şengül Fen Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Belgin SÖNMEZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Odunpazarı İlçe Milli Eğitim Müdürlüğü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Birol GEÇİCİ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Odunpazarı İlçe Milli Eğitim Müdürlüğü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Burcu ÇİMEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Teknik Üniversitesi Milli Teknoloji Atölyeleri</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Burcu ÖZAYDIN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Kılıçoğlu Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Çiğdem ÇUBUKÇU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Şehit Mutlu Yıldırım Ortaokulu</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Emma SAYGI DOĞRU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Cumhuriyet Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Ercan DEMİRTAŞ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Evren TOPCU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Fatih Fen Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Fisün YANARDAĞ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Gençlik ve Spor İl Müdürlüğü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Hakan İSKENDER</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Trabzon Ortahisar Bilim ve Sanat Merkezi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Hakan ŞAHİN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Öğretmenevi ve Akşam Sanat Okulu</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Hasan GÜNAYDIN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">İnönü Vehbi Koç Ortaokulu</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Nazan CEYLAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Yunus Emre Mesleki ve Teknik Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Onur TOPRAK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Özlem ÖZTOK</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">TOKİ Şehit İsmail Tetik Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Sadife DEMİRAL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Milli Eğitim Akademisi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Serap ÖZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Borsa İstanbul Fen Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Sezergül YIKMIŞ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Milli Eğitim Akademisi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Songül Esin EROL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Emine-Emir Şahbaz Bilim ve Sanat Merkezi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Tezcan KORUCUOĞLU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Şehit Fazıl Yıldırım Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Gökhan GÜÇLÜ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Şehit Fazıl Yıldırım Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Ümit ELSÖZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Zeliha DUR</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Emine-Emir Şahbaz Bilim ve Sanat Merkezi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Yuşa YILDIZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Balıkesir / Karesi - Gazi Mustafa Kemal Turizm Mesleki ve Teknik Anadolu Lisesi</span>
+      </li>
+      </template>
+  <template id="kurulSablon-6" data-ad="Sempozyum Organizasyon Ekibi" data-ikon="fa-people-group" data-sayi="10">
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Ebru BAŞOĞLU</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi Koordinatörü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Funda ÇIRAY ÖZKARA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Dr. Gökay YÜKSEL</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Emre ARSLAN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">İlaydanur KORKMAZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Pınar YAVUZ</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Yasemin ÇETİN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir İl Milli Eğitim Müdürlüğü AR-GE Birimi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Yasemin ATMACA</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Eskişehir Anadolu Lisesi İzcilik Kulübü</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Mithat ESEN</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Ali Güven Turizm Mesleki ve Teknik Anadolu Lisesi</span>
+      </li>
+          <li class="rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-3">
+        <span class="block font-title font-bold text-sm text-slate-900">Göktuğ ACET</span>
+        <span class="block mt-0.5 text-[13px] leading-snug text-slate-600">Türk Telekom Mesleki ve Teknik Anadolu Lisesi</span>
+      </li>
+      </template>
+
+    <div id="allFaqModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4">
+  <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+    
+    <div class="p-5 sm:p-6 bg-gradient-to-r from-emerald-800 to-teal-800 text-white flex items-center justify-between shrink-0">
+      <div>
+        <span class="text-xs font-title font-bold text-emerald-300 uppercase tracking-widest">Bilgi Bankası</span>
+        <h3 class="font-title font-extrabold text-lg sm:text-xl mt-0.5">Sıkça Sorulan Sorular (Tümü)</h3>
+      </div>
+      <button data-modal-close="allFaqModal" class="text-white/80 hover:text-white p-2 text-xl transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="p-6 overflow-y-auto space-y-3.5 text-xs sm:text-sm">
+      
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">1. Kimler başvuru yapabilir?</h4>
+        <p class="text-slate-600">Eskişehir’de bulunan proje okulları, Anadolu liseleri ile BİLSEM olmak üzere 19 okulun öğrencileri kendi okul idaresine başvuru yaparak, e-mail aracılığıyla/web sayfasından başvuru yaparak katılabilir.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">2. Bildiri başvurusu nasıl yapabilirim?</h4>
+        <p class="text-slate-600">Bu proje Eskişehir’de proje okulları arasında yapılmaktadır. Bu okullarda okuyan öğrenciler okulundaki ilgili öğretmene veya müdür yardımcısına giderek başvuru yapabilir. Ayrıca proje web sayfasında bildiri menüsü tıklanarak yönergeler takip edilebilir.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">3. Etkileyici sunum yapma teknikleri nelerdir?</h4>
+        <p class="text-slate-600">Etkileyici sunum yapmak için sizler için oluşturduğumuz dokümandan yararlanabilirsiniz.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">4. Bildiri hazırlama kuralları nelerdir?</h4>
+        <p class="text-slate-600">Araştırma dili sade olmalı; Times New Roman, 12 punto, 1.5 satır aralığı ve iki yana yasla formatında yazılmalıdır. Üst/alt 3 cm, sol 4 cm ve sağ 2.5 cm kenar boşlukları bırakılmalı ve APA 7 kuralları uygulanmalıdır.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">5. Bir bildiride en fazla kaç öğrenci ismi yazılabilir?</h4>
+        <p class="text-slate-600">En fazla 3 öğrencinin ismine yer verilebilir.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">6. Bir öğrenci birden fazla bildiri ile sempozyuma katılım sağlayabilir mi?</h4>
+        <p class="text-slate-600">Evet. Bir öğrenci birden fazla bildiri sunumu gerçekleştirebilir.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">7. Kabul edilen bildiriler nasıl duyurulacak?</h4>
+        <p class="text-slate-600">Katılımcılara sempozyum mail adresi ile geri bildirim verilecek olup kabul edilen bildiriler web sayfasından duyurulacaktır.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">8. Poster sunumlar sempozyum tam metin kitabında yer alacak mı?</h4>
+        <p class="text-slate-600">Sadece bildiri tam metinlerine tam metin kitabında yer verilecektir.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">9. Poster sunumlar için tam metin yazılacak mı?</h4>
+        <p class="text-slate-600">Poster formatında gerekli düzenlemeler yapılacak olup, intihal incelemesi nedeniyle tam metin formatı istenecektir.</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <h4 class="font-title font-bold text-slate-900 mb-1">10. Sunumu bildiri sahiplerinin hepsi mi yapacak yoksa sadece bir öğrenci mi?</h4>
+        <p class="text-slate-600">Mücbir sebepler hariç bildiri sahibi tüm öğrencilerin ortak sunum yapmaları beklenmektedir.</p>
+      </div>
+
+    </div>
+
+    <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end shrink-0">
+      <button data-modal-close="allFaqModal" class="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-title font-bold hover:bg-slate-800">
+        Kapat
+      </button>
+    </div>
+
+  </div>
+</div>
+  <div id="noticeModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-xs hidden p-4">
+  <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+    <div class="flex items-center justify-between border-b pb-3 mb-4 border-slate-100">
+      <span class="text-xs font-title font-bold text-brand-emerald uppercase tracking-wider">Duyuru Detayı</span>
+      <button data-modal-close="noticeModal" class="text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark text-lg"></i></button>
+    </div>
+    <h3 id="noticeTitle" class="font-title font-bold text-slate-900 text-lg mb-2"></h3>
+    
+    <div id="noticeBody" class="zengin-metin text-sm text-slate-600 leading-relaxed font-sans mb-6 max-h-[60vh] overflow-y-auto"></div>
+    <div class="flex justify-end">
+      <button data-modal-close="noticeModal" class="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-title font-bold hover:bg-slate-800">Tamam</button>
+    </div>
+  </div>
+</div>
+
+  <button id="scrollTopBtn" aria-label="Sayfa Başına Çık" class="fixed bottom-6 right-6 z-40 w-11 h-11 bg-brand-accent hover:bg-brand-accentHover text-white rounded-lg shadow-lg shadow-orange-500/30 flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none transform translate-y-4 hover:-translate-y-1 active:scale-95">
+  <i class="fa-solid fa-chevron-up text-base"></i>
+</button>
+
+
+<!-- surum-gecisi -->
+<style>
+  .sg-cubuk{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:6px;
+    padding:6px;border-radius:999px;background:rgba(15,23,42,.92);box-shadow:0 10px 30px rgba(0,0,0,.35);
+    font:600 13px/1.2 Montserrat,system-ui,sans-serif;color:#cbd5e1;max-width:calc(100vw - 32px)}
+  .sg-etiket{padding:0 8px 0 10px;white-space:nowrap}
+  .sg-dugme{display:flex;align-items:center;gap:7px;padding:8px 14px 8px 8px;border-radius:999px;color:#e2e8f0;text-decoration:none;white-space:nowrap}
+  .sg-dugme:hover{background:rgba(255,255,255,.1)}
+  .sg-dugme:focus-visible{outline:2px solid #6ee7b7;outline-offset:2px}
+  .sg-secili{background:#059669;color:#fff} .sg-secili:hover{background:#059669}
+  .sg-no{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);font-size:12px}
+  .sg-kisa{display:none}
+  .sg-bosluk{height:72px;background:#020617}
+  @media (max-width:640px){.sg-etiket,.sg-uzun{display:none}.sg-kisa{display:inline}.sg-cubuk{bottom:10px}}
+</style>
+<div class="sg-bosluk" aria-hidden="true"></div>
+<nav class="sg-cubuk" aria-label="Tasarım sürümleri">
+  <span class="sg-etiket">Tasarım:</span>
+  <a href="onceki.html" class="sg-dugme sg-secili" aria-current="page"><span class="sg-no">1</span><span class="sg-uzun">Klasik içerik, tahta arka planda</span><span class="sg-kisa">Klasik</span></a>
+  <a href="index.html" class="sg-dugme"><span class="sg-no">2</span><span class="sg-uzun">Tebeşirle yazılmış içerik</span><span class="sg-kisa">Tebeşir</span></a>
+</nav>
+<!-- /surum-gecisi -->
+</body>
+</html>
