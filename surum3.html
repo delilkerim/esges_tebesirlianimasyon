@@ -7,18 +7,18 @@
   <title>ESGES 2027 | Tasarım Önizlemesi – Sürüm 3</title>
   <link rel="icon" href="images/esges-logo.png">
   <link rel="stylesheet" href="assets/app-8O1k_SH7.css">
-  <script type="module" src="assets/app-DquBh3Ga.js"></script>
+  <script type="module" src="assets/app-s3.js"></script>
 <style>
   /* Sürüm 3: beyaz başlık zemini, tahta ayrı bölümde */
-  .s3-hero{min-height:auto;background:#fff}
+  .s3-hero{min-height:auto;background:#fff;padding-bottom:4.5rem}
+  @media (min-width:640px){.s3-hero{padding-bottom:6rem}}
   .s3-via{--tw-gradient-via:#0d9488;--tw-gradient-stops:var(--tw-gradient-from),#0d9488 var(--tw-gradient-via-position,50%),var(--tw-gradient-to)}
   .s3-sayac{background:#f8fafc;border:1px solid #e2e8f0;color:#0f172a}
   .s3-tahta-bolum{background:#1f3d30;border-top:10px solid #8b5a2b;border-bottom:14px solid #6f4521;
     box-shadow:inset 0 0 0 2px #00000033}
-  .s3-tahta{height:clamp(440px,78vh,820px)}
-  .s3-kontrol{transform:translateX(-50%)}
+  .s3-tahta{height:min(clamp(440px,78vh,820px),62.5vw)}
+  .s3-kontrol{padding:10px 0 12px;background:#2b5442;border-top:1px solid #ffffff1a}
   .s3-cagri{background:#1e293b;border-color:#334155}
-  @media (max-width:640px){.s3-tahta{height:clamp(480px,82vh,720px)}}
 </style>
 </head>
 <body class="font-sans bg-brand-lightBg text-slate-800 antialiased selection:bg-brand-emerald selection:text-white">
@@ -266,12 +266,13 @@
     <canvas data-katman="arac" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
   </div>
       
-    <div class="s3-kontrol absolute left-1/2 bottom-4 z-10 flex justify-center items-center gap-3">
+    
+    </div>
+    <div class="s3-kontrol flex justify-center items-center gap-3">
       <div id="tebesirNoktalar" class="flex items-center gap-2"></div>
       <button type="button" id="tebesirDurdur" aria-label="Tahta animasyonunu duraklat" aria-pressed="false" class="w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 border border-white/25 text-white/90 flex items-center justify-center transition-colors">
         <i class="fa-solid fa-pause text-xs" aria-hidden="true"></i>
       </button>
-    </div>
     </div>
   </section>
   <section id="duyurular" class="py-12 sm:py-16 bg-slate-50 relative border-b border-slate-200 overflow-hidden">
